@@ -9,7 +9,7 @@ const InputEl = styled.input`
   color: ${p => p.theme.textField.textColor};
   font-family: ubuntu;
   font-size: 1rem;
-  /* -webkit-text-fill-color: ${p => p.theme.textField.textColor}; */
+  min-height: 22px;
 `;
 
 interface InputProps {

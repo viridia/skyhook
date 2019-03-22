@@ -14,6 +14,8 @@ export const makeLight = (color: string, accent: string): Theme => {
     pageColor: c8,
     focusColor: c6,
     textNormal: textColor,
+
+    // Buttons
     button: {
       default: {
         bgColor: c7,
@@ -32,14 +34,12 @@ export const makeLight = (color: string, accent: string): Theme => {
       },
     },
 
+    // Text inputs
     textField: {
       bgColor: '#fff',
       borderColor: c7,
       textColor,
     },
-  // Forms
-  // inputBorderColor: dye(0.85, diluted),
-  // inputBgColor: dye(1, primary),
 
     tab: null,
     menu: null,

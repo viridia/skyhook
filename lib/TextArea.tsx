@@ -4,6 +4,14 @@ import { styled } from './style';
 import { ValidationState, ValidationMsg } from './ValidationMsg';
 import { TextInputContainer } from './TextInputContainer';
 
+const InputEl = styled.textarea`
+  background-color: ${p => p.theme.textField.bgColor};
+  color: ${p => p.theme.textField.textColor};
+  font-family: ubuntu;
+  font-size: 1rem;
+  min-height: 22px;
+`;
+
 interface Props {
   containerClassName?: string;
   validationMsg?: string;
@@ -21,9 +29,9 @@ const TextAreaImpl = ({
     & React.TextareaHTMLAttributes<HTMLTextAreaElement>) => {
   return (
     <TextInputContainer className={classNames('form-control', containerClassName)}>
-      <textarea className={classNames(className, validationStatus)} {...attrs}>
+      <InputEl className={classNames(className, validationStatus)} {...attrs}>
         {children}
-      </textarea>
+      </InputEl>
       {validationStatus &&
         <ValidationMsg className={classNames(validationStatus)}>
           {validationMsg}
