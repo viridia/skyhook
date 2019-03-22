@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+builds/
+/dist
+/data
+/.env
+/.cache
+coverage/
+npm-debug.log
+junit.xml
