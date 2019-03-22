@@ -4,6 +4,7 @@ import { darken, lighten, mix } from 'polished';
 export const makeDark = (color: string, accent: string): Theme => {
   const c0 = lighten(0.05, color);
   const c1 = lighten(0.1, color);
+  // const c2 = lighten(0.2, color);
   const c9 = mix(0.1, color, '#fff');
   return {
     pageColor: color,
@@ -25,6 +26,12 @@ export const makeDark = (color: string, accent: string): Theme => {
         textColor: c9,
         borderColor: darken(0.03, color),
       },
+    },
+
+    textField: {
+      bgColor: darken(0.05, color),
+      borderColor: c1,
+      textColor: c9,
     },
 
     tab: null,

@@ -46,6 +46,13 @@ export interface MenuTheme {
   dividerColor: string;
 }
 
+/** Theme properties for text fields. */
+export interface TextField {
+  bgColor: string;
+  textColor: string;
+  borderColor: string;
+}
+
 /** Combined theme. */
 export interface Theme {
   pageColor: string;
@@ -62,4 +69,5 @@ export interface Theme {
   tab: TabTheme;
   dialog: DialogTheme;
   menu: MenuTheme;
+  textField: TextField;
 }

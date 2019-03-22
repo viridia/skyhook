@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { styled } from '../lib/style';
 import { ThemeCard } from './ThemeCard';
 
-const ButtonDemo = styled.div`
+const DemoLayout = styled.div`
   font-family: 'ubuntu';
   color: ${p => p.theme.textNormal};
 
@@ -27,7 +27,7 @@ storiesOf('Components/Button', module).add(
   () => (
     <ThemeCard>
       {() => (
-        <ButtonDemo>
+        <DemoLayout>
           <header>Button Kinds</header>
           <Button onClick={action('button-click')}>Default</Button>
           <Button onClick={action('button-click')} kind="primary">Primary</Button>
@@ -37,20 +37,20 @@ storiesOf('Components/Button', module).add(
           <Button onClick={action('button-click')} size="small">Small</Button>
           <Button onClick={action('button-click')} size="smaller">Smaller</Button>
           <Button onClick={action('button-click')} size="mini">Mini</Button>
-        </ButtonDemo>
+        </DemoLayout>
       )}
     </ThemeCard>
   ),
 ).add(
   'Icon Button (TODO)',
   () => (
-    <ButtonDemo>
+    <DemoLayout>
       <Button onClick={action('button-click')}>Default</Button>
       <Button onClick={action('button-click')} kind="primary">Primary</Button>
       <Button onClick={action('button-click')} kind="action">Action</Button>
       <Button onClick={action('button-click')} size="small">Small</Button>
       <Button onClick={action('button-click')} size="smaller">Smaller</Button>
       <Button onClick={action('button-click')} size="mini">Mini</Button>
-    </ButtonDemo>
+    </DemoLayout>
   ),
 );

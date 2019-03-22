@@ -5,13 +5,14 @@ import { darken, mix } from 'polished';
 export const makeLight = (color: string, accent: string): Theme => {
   // const muted = makeSpread(desaturate(0.2, color));
   const textColor = '#222';
-  const c1 = darken(0.1, color);
+  // const c1 = darken(0.1, color);
   const c4 = mix(0.7, color, '#fff');
+  const c6 = mix(0.3, color, '#fff');
   const c7 = mix(0.2, color, '#fff');
   const c8 = mix(0.1, color, '#fff');
   return {
     pageColor: c8,
-    focusColor: c7,
+    focusColor: c6,
     textNormal: textColor,
     button: {
       default: {
@@ -30,6 +31,15 @@ export const makeLight = (color: string, accent: string): Theme => {
         borderColor: darken(0.1, accent),
       },
     },
+
+    textField: {
+      bgColor: '#fff',
+      borderColor: c7,
+      textColor,
+    },
+  // Forms
+  // inputBorderColor: dye(0.85, diluted),
+  // inputBgColor: dye(1, primary),
 
     tab: null,
     menu: null,

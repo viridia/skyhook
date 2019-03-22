@@ -2,10 +2,24 @@ import * as React from 'react';
 import { ThemeProvider, styled } from '../lib/style';
 import { makeLight, makeDark } from '../lib/theme';
 import { createGlobalStyle } from 'styled-components';
+import { cover } from 'polished';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    font-family: ubuntu;
+  }
+`;
+
+const ThemeLayout = styled.section`
+  display: flex;
+  ${cover()}
+`;
 
 const CardEl = styled.section`
   background-color: ${p => p.theme.pageColor};
   display: block;
+  flex: 1;
   padding: 1rem;
 `;
 
@@ -13,15 +27,9 @@ interface Props {
   children: () => JSX.Element;
 }
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-  }
-`;
-
 export function ThemeCard({ children }: Props) {
   return (
-    <React.Fragment>
+    <ThemeLayout>
       <GlobalStyle />
       <ThemeProvider theme={light1}>
         <CardEl>
@@ -43,7 +51,7 @@ export function ThemeCard({ children }: Props) {
           {children()}
         </CardEl>
       </ThemeProvider>
-    </React.Fragment>
+    </ThemeLayout>
   )
 }
 
