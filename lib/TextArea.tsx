@@ -9,7 +9,7 @@ const InputEl = styled.textarea`
   color: ${p => p.theme.textField.textColor};
   font-family: ubuntu;
   font-size: 1rem;
-  min-height: 22px;
+  min-height: 18px;
 `;
 
 interface Props {
