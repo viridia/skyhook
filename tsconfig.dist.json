@@ -8,7 +8,8 @@
     "allowJs": false,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDirs": ["lib", "stories"],
+    "rootDirs": ["lib"],
+    "types": [],
     "baseUrl": "lib",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -24,10 +25,8 @@
   "include": [
     "lib/**/*.ts",
     "lib/**/*.tsx",
-    "stories/**/*.ts",
-    "stories/**/*.tsx"
   ],
   "exclude": [
-    "node_modules",
+    "node_modules"
   ]
 }

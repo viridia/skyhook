@@ -2,9 +2,11 @@
   "name": "skyhook",
   "version": "1.0.0",
   "description": "Themable UI framework built with styled-components.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "gen-icons": "cd icons && npx @svgr/cli --ext tsx --out-dir=../icons-compiled *.svg",
+    "build": "tsc --project ./tsconfig.dist.json",
+    "clean": "rm -r dist",
+    "gen-icons": "cd lib/icons && npx @svgr/cli --ext tsx --out-dir=../icons-compiled *.svg",
     "storybook": "start-storybook --port 4321"
   },
   "keywords": [

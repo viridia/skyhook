@@ -4,7 +4,7 @@ import { styled } from './style';
 import { Modal } from 'react-overlays';
 import { CSSTransition } from 'react-transition-group';
 import { mix, shade } from 'polished';
-import IconClose from '../icons-compiled/IcClose';
+import IconClose from './icons-compiled/IcClose';
 
 type CloseHandler = () => any;
 const CloseContext = React.createContext<CloseHandler>(null);
