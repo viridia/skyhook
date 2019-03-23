@@ -6,9 +6,6 @@ import { styled } from '../lib/style';
 import { ThemeCard } from './ThemeCard';
 
 const DemoLayout = styled.div`
-  font-family: 'ubuntu';
-  color: ${p => p.theme.textNormal};
-
   > button {
     margin-right: 8px;
   }

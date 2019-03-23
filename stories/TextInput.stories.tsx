@@ -5,9 +5,6 @@ import { styled } from '../lib/style';
 import { ThemeCard } from './ThemeCard';
 
 const DemoLayout = styled.div`
-  font-family: 'ubuntu';
-  color: ${p => p.theme.textNormal};
-
   > header {
     margin: .5rem 0;
     font-weight: bold;

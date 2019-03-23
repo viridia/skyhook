@@ -1,12 +1,13 @@
 import { Theme } from './Theme';
-// import { makeSpread } from './colors';
-import { darken, mix } from 'polished';
+import { darken, mix, transparentize } from 'polished';
 
 export const makeLight = (color: string, accent: string): Theme => {
   // const muted = makeSpread(desaturate(0.2, color));
   const textColor = '#222';
-  // const c1 = darken(0.1, color);
+  const shadow = transparentize(0.7, mix(0.3, color, '#000'));
+  const c1 = darken(0.3, color);
   const c4 = mix(0.7, color, '#fff');
+  const c5 = mix(0.4, color, '#fff');
   const c6 = mix(0.3, color, '#fff');
   const c7 = mix(0.2, color, '#fff');
   const c8 = mix(0.1, color, '#fff');
@@ -43,7 +44,14 @@ export const makeLight = (color: string, accent: string): Theme => {
 
     tab: null,
     menu: null,
-    dialog: null,
+    dialog: {
+      backdropColor: c1,
+      bgColor: c7,
+      borderColor: darken(0.1, c7),
+      headerBgColor: c5,
+      headerTextColor: textColor,
+      shadowColor: shadow,
+    },
     progress: null,
   }
 };

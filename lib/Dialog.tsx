@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import { styled } from './style';
 import { Modal } from 'react-overlays';
 import { CSSTransition } from 'react-transition-group';
-import { darken, lighten } from 'polished';
-import IconClose from '../icons/ic_close.svg';
+import { mix, shade } from 'polished';
+import IconClose from '../icons-compiled/IcClose';
 
 type CloseHandler = () => any;
 const CloseContext = React.createContext<CloseHandler>(null);
@@ -33,7 +33,7 @@ const CloseButton = styled.button`
   }
 
   &:hover > svg {
-    fill: ${p => lighten(0.2, p.theme.dialog.headerTextColor)};
+    fill: ${p => mix(0.3, p.theme.dialog.headerBgColor, p.theme.dialog.headerTextColor)};
   }
 `;
 
@@ -56,7 +56,7 @@ function HeaderImpl({ children, className, hasClose }: HeaderProps) {
 const Header = styled(HeaderImpl)`
   align-items: center;
   background-color: ${p => p.theme.dialog.headerBgColor};
-  border-radius: 6px 6px 0 0;
+  border-radius: 5px 5px 0 0;
   color: ${p => p.theme.dialog.headerTextColor};
   display: flex;
   flex-direction: row;
@@ -68,6 +68,7 @@ const Header = styled(HeaderImpl)`
 
 // Body component
 const Body = styled.section`
+  color: ${p => p.theme.textNormal};
   display: flex;
   flex-direction: column;
   padding: 12px;
@@ -79,7 +80,7 @@ const Body = styled.section`
 
 // Footer component
 const Footer = styled.footer`
-  border-top: 1px solid ${p => darken(0.1, p.theme.dialog.bgColor)};
+  border-top: 1px solid ${p => shade(0.1, p.theme.dialog.bgColor)};
   display: flex;
   flex-direction: row;
   padding: 8px;
@@ -96,13 +97,12 @@ const Backdrop = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  /* z-index: 6; */
   opacity: 0;
   background-color: ${p => p.theme.dialog.backdropColor};
   transition: opacity .3s ease;
 
   &.dialog-appear-active, &.dialog-enter, &.dialog-enter-done {
-    opacity: 0.2;
+    opacity: 0.3;
   }
 `;
 
@@ -150,7 +150,7 @@ interface Props {
   style?: any;
 
   /** Called when the dialog first opens. */
-  onShow?: () => void;
+  onOpen?: () => void;
 
   /** Indicates that the dialog wants to close. */
   onClose: () => void;
@@ -168,7 +168,7 @@ export class Dialog extends React.Component<Props> {
   public render() {
     const {
       open,
-      onShow,
+      onOpen,
       onClose,
       onExited,
       keyboard = true,
@@ -184,7 +184,7 @@ export class Dialog extends React.Component<Props> {
         backdrop={true}
         transition={DialogTransition}
         backdropTransition={DialogTransition}
-        onShow={onShow}
+        onShow={onOpen}
         onHide={onClose}
         onExited={onExited}
         onEscapeKeyDown={onClose}
