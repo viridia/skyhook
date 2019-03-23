@@ -8,10 +8,12 @@ import { ThemeCard } from './ThemeCard';
 const DemoLayout = styled.div`
   > button {
     margin-right: 8px;
+    margin-bottom: 8px;
   }
 
   > header {
     margin: .5rem 0;
+    color: ${p => p.theme.textNormal};
 
     &:first-child {
       margin-top: 0;

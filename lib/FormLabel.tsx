@@ -19,14 +19,16 @@ export const FormLabel = styled.span`
   }
 
   .layout-inline & {
-    margin: 8px;
+    margin-left: 8px;
+    margin-top: 6px;
     &:first-child {
       margin-left: 0;
     }
   }
 
   .layout-row & {
-    margin: 8px;
+    margin-left: 8px;
+    margin-top: 6px;
     &:first-child {
       margin-left: 0;
     }

@@ -16,6 +16,10 @@ export const FormLayoutCSS = css`
     gap: 8px;
     align-items: flex-start;
     justify-items: flex-start;
+
+    .form-control {
+      grid-column: controls;
+    }
   }
 
   &.layout-stacked {
@@ -30,16 +34,24 @@ export const FormLayoutCSS = css`
     align-items: flex-start;
   }
 
-  &.layout-inline {
+  &.layout-inline, &.layout-row {
     display: flex;
     flex-direction: row;
-    flex-flow: wrap;
+
+    > * {
+      margin-left: 8px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.layout-inline {
     align-items: center;
+    flex-flow: wrap;
   }
 
   &.layout-row {
-    display: flex;
-    flex-direction: row;
     align-items: flex-start;
   }
 `;
