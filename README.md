@@ -4,7 +4,7 @@ A themeable UI framework created using styled-components.
 
 ![Themable Buttons](./docs/screenshots/buttons.png)
 
-* [Live Demo](./docs/storybook/index.html).
+* [Live Demo](https://viridia.github.io/skyhook/storybook/index.html).
 
 ## Why another UI framework?
 
