@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --project ./tsconfig.dist.json",
-    "build-storybook": "build-storybook -c .storybook -o .out",
+    "build-storybook": "build-storybook -c .storybook -o docs/storybook",
     "clean": "rm -r dist",
     "gen-icons": "cd lib/icons && npx @svgr/cli --ext tsx --out-dir=../icons-compiled *.svg",
     "storybook": "start-storybook --port 4321"
@@ -15,7 +15,7 @@
     "react",
     "widgets"
   ],
-  "author": "",
+  "author": "Talin",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.4.0",
@@ -44,5 +44,17 @@
     "@types/storybook__react": "^4.0.1",
     "@types/styled-components": "^4.1.12",
     "storybook-addon-jsx": "^7.0.1"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viridia/skyhook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viridia/skyhook/issues"
+  },
+  "homepage": "https://github.com/viridia/skyhook#readme"
 }
