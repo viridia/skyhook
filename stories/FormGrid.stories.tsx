@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { TextInput, FormLabel, FormLayout, Button, FormControlGroup } from '../lib';
+import { TextInput, FormLabel, FormGrid, Button, FormControlGroup } from '../lib';
 import { storiesOf } from '@storybook/react';
 import { styled } from '../lib/style';
 import { ThemeCard } from './ThemeCard';
-import { FormLayoutProps } from '../lib/FormLayout';
+import { FormGridProps } from '../lib/FormGrid';
 
 const DemoLayout = styled.div`
   > header {
@@ -20,10 +20,10 @@ const DemoLayout = styled.div`
   }
 `;
 
-function FormLayoutDemo({ layout }: FormLayoutProps) {
+function FormGridDemo({ layout }: FormGridProps) {
   return (
     <DemoLayout>
-      <FormLayout layout={layout}>
+      <FormGrid layout={layout}>
         <FormLabel>First Name:</FormLabel>
         <TextInput defaultValue="James" name="first-name"/>
         <FormLabel>Last Name:</FormLabel>
@@ -39,19 +39,19 @@ function FormLayoutDemo({ layout }: FormLayoutProps) {
         <FormControlGroup>
           <Button>Submit</Button>
         </FormControlGroup>
-      </FormLayout>
+      </FormGrid>
     </DemoLayout>
   )
 }
 
-storiesOf('Components/FormLayout', module).add(
-  'FormLayout.ledger', () => <ThemeCard>{() => <FormLayoutDemo layout="ledger" />}</ThemeCard>,
+storiesOf('Components/FormGrid', module).add(
+  'FormGrid.ledger', () => <ThemeCard>{() => <FormGridDemo layout="ledger" />}</ThemeCard>,
 ).add(
-  'FormLayout.row', () => <ThemeCard>{() => <FormLayoutDemo layout="row" />}</ThemeCard>,
+  'FormGrid.row', () => <ThemeCard>{() => <FormGridDemo layout="row" />}</ThemeCard>,
 ).add(
-  'FormLayout.column', () => <ThemeCard>{() => <FormLayoutDemo layout="column" />}</ThemeCard>,
+  'FormGrid.column', () => <ThemeCard>{() => <FormGridDemo layout="column" />}</ThemeCard>,
 ).add(
-  'FormLayout.stacked', () => <ThemeCard>{() => <FormLayoutDemo layout="stacked" />}</ThemeCard>,
+  'FormGrid.stacked', () => <ThemeCard>{() => <FormGridDemo layout="stacked" />}</ThemeCard>,
 ).add(
-  'FormLayout.inline', () => <ThemeCard>{() => <FormLayoutDemo layout="inline" />}</ThemeCard>,
+  'FormGrid.inline', () => <ThemeCard>{() => <FormGridDemo layout="inline" />}</ThemeCard>,
 );

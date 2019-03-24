@@ -3,7 +3,7 @@ import { Form, TextInput, FormLabel, Button, FormControlGroup } from '../lib';
 import { storiesOf } from '@storybook/react';
 import { styled } from '../lib/style';
 import { ThemeCard } from './ThemeCard';
-import { FormLayoutProps } from '../lib/FormLayout';
+import { FormGridProps } from './FormGrid';
 
 const DemoLayout = styled.div`
   > header {
@@ -20,7 +20,7 @@ const DemoLayout = styled.div`
   }
 `;
 
-function FormDemo({ layout }: FormLayoutProps) {
+function FormDemo({ layout }: FormGridProps) {
   return (
     <DemoLayout>
       <Form layout={layout}>

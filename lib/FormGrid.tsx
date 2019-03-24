@@ -4,7 +4,7 @@ import { css, styled } from './style';
 
 export type FormLayoutStyle = 'stacked' | 'inline' | 'ledger' | 'row' | 'column';
 
-export interface FormLayoutProps {
+export interface FormGridProps {
   layout?: FormLayoutStyle;
 }
 
@@ -56,8 +56,8 @@ export const FormLayoutCSS = css`
   }
 `;
 
-function FormLayoutImpl({ children, className, layout = 'ledger', ...attrs }:
-    React.FormHTMLAttributes<HTMLElement> & FormLayoutProps) {
+function FormGridImpl({ children, className, layout = 'ledger', ...attrs }:
+    React.FormHTMLAttributes<HTMLElement> & FormGridProps) {
   return (
     <section className={classNames(className, `layout-${layout}`)} {...attrs}>
       {children}
@@ -65,7 +65,7 @@ function FormLayoutImpl({ children, className, layout = 'ledger', ...attrs }:
   );
 }
 
-export const FormLayout = styled(FormLayoutImpl)`
+export const FormGrid = styled(FormGridImpl)`
   ${FormLayoutCSS}
 `;
 
