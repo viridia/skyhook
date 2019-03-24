@@ -1,0 +1,4 @@
+import * as styledComponents from 'styled-components';
+import { Theme } from './theme';
+declare const styled: styledComponents.ThemedBaseStyledInterface<Theme>, css: styledComponents.BaseThemedCssFunction<Theme>, createGlobalStyle: <P extends object = {}>(first: TemplateStringsArray | styledComponents.CSSObject | styledComponents.InterpolationFunction<styledComponents.ThemedStyledProps<P, Theme>>, ...interpolations: styledComponents.Interpolation<styledComponents.ThemedStyledProps<P, Theme>>[]) => styledComponents.GlobalStyleComponent<P, Theme>, keyframes: (strings: TemplateStringsArray | styledComponents.CSSKeyframes, ...interpolations: styledComponents.SimpleInterpolation[]) => styledComponents.Keyframes, ThemeProvider: import("react").ComponentClass<styledComponents.ThemeProviderProps<Theme, Theme>, any>;
+export { styled, css, createGlobalStyle, keyframes, ThemeProvider };

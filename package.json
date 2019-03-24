@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --project ./tsconfig.dist.json",
+    "build-storybook": "build-storybook -c .storybook -o .out",
     "clean": "rm -r dist",
     "gen-icons": "cd lib/icons && npx @svgr/cli --ext tsx --out-dir=../icons-compiled *.svg",
     "storybook": "start-storybook --port 4321"

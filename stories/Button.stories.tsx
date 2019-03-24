@@ -46,7 +46,7 @@ storiesOf('Components/Button', module).add(
     </ThemeCard>
   ),
 ).add(
-  'Icon Button (TODO)',
+  'Icon Button',
   () => (
     <ThemeCard>
       {() => (

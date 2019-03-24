@@ -1,0 +1,11 @@
+"use strict";
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var style_1 = require("./style");
+/** Decorative frame around a text input or text area control. */
+exports.TextInputContainer = style_1.styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  align-items: stretch;\n  display: flex;\n  flex-direction: column;\n\n  > .text-input-content {\n    align-items: center;\n    background-color: ", ";\n    border: 1px solid ", ";\n    border-radius: 3px;\n    display: flex;\n    flex-direction: row;\n\n    > input, > textarea {\n      border-radius: 2px;\n    }\n\n    &:focus-within {\n      box-shadow: 0 0 0 3px ", ";\n      z-index: 1;\n    }\n\n    &.success {\n      > input, > textarea {\n        box-shadow: inset 0 0 0 2px #00cc0044;\n      }\n    }\n\n    &.warning {\n      > input, > textarea {\n        box-shadow: inset 0 0 0 2px #cccc0066;\n      }\n    }\n\n    &.error {\n      > input, > textarea {\n        box-shadow: inset 0 0 0 2px #ff888877;\n      }\n    }\n  }\n"], ["\n  align-items: stretch;\n  display: flex;\n  flex-direction: column;\n\n  > .text-input-content {\n    align-items: center;\n    background-color: ", ";\n    border: 1px solid ", ";\n    border-radius: 3px;\n    display: flex;\n    flex-direction: row;\n\n    > input, > textarea {\n      border-radius: 2px;\n    }\n\n    &:focus-within {\n      box-shadow: 0 0 0 3px ", ";\n      z-index: 1;\n    }\n\n    &.success {\n      > input, > textarea {\n        box-shadow: inset 0 0 0 2px #00cc0044;\n      }\n    }\n\n    &.warning {\n      > input, > textarea {\n        box-shadow: inset 0 0 0 2px #cccc0066;\n      }\n    }\n\n    &.error {\n      > input, > textarea {\n        box-shadow: inset 0 0 0 2px #ff888877;\n      }\n    }\n  }\n"])), function (p) { return p.theme.textField.bgColor; }, function (p) { return p.theme.textField.borderColor; }, function (p) { return p.theme.focusColor; });
+var templateObject_1;
+//# sourceMappingURL=TextInputContainer.js.map
