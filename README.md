@@ -7,29 +7,29 @@ A themeable UI framework created using styled-components.
 ## Why another UI framework?
 
 Existing framrworks such as Material UI, Semantic UI, and Bootstrap are designed with the
-assumption that "one size fits all" - that is, a single, universal "design language" will
+assumption that "one size fits all": that is, a single, universal "design language" will
 be the best fit for every type of application. However, in practice these UI frameworks
 are implicitly targeted towards a consumer audience. But there are many other audiences:
 
-* Artists and digital content creators are used to working with complex, dense UIs. In addition,
+* **Artists and digital content creators** are used to working with complex, dense UIs. In addition,
   artists tools such as Maya and Blender are typically dark-themed and muted, so as to make the
-  images and movies stand out better. In these apps the media, not the UI, is the star of the show.
-* Enterprise and professional users also frequently work with complex UIs, particularly forms
+  images and movies stand out better. In these apps the *media*, not the UI, is the star of the show.
+* **Enterprise and professional users** also frequently work with complex UIs, particularly forms
   and tables.
-* In games and entertainment programs, novelty often wins over consistency.
-* For apps that are tightly tied to a particular brand, you'll want a UI that conforms to
+* In **games and entertainment programs**, novelty often wins over consistency.
+* For apps that are **tightly tied to a particular brand**, you'll want a UI that conforms to
   the design style of the brand.
 
 The goal of Skyhook is to provide a common framework for creating your own visual design
 language that suits the needs of your application. It provides a baseline set of styles which
-are highly customizable, as well as all of the implementation details of interaction.
+are highly customizable, as well as all of the implementation details needed for interaction.
 
 API-wise, the components are very similar to React-Bootstrap, although it is based on much
-more recent technologies such as styled-components and React hooks. The overal organization
+more recent technologies such as styled-components and React hooks. The overall organization
 of the widgets is also partly inspired by Material UI and other libraries.
 
 The framework also attempts to leverage standard HTML widgets to the maximum extent possible.
-A <Button> component is just an HTML button with some styles associated with it; your event
+A ```<Button>``` component is just an HTML button with some styles associated with it; your event
 handlers should be no different than if you were using the standard HTML widget. (This means
 that you'll need to be responsible for calling ```preventDefault()``` where appropriate.)
 
@@ -37,7 +37,7 @@ that you'll need to be responsible for calling ```preventDefault()``` where appr
 
 ### Theme Factories
 
-Skyhook provides a set of "theme factories" which can produce a theme based on a primary color
+Skyhook provides a set of *theme factories* which can produce a theme based on a primary color
 and an accent color. However, this should only be considered as a starting point; in practice,
 you'll probably want to create your own theme from scratch, controlling every color precisely.
 
