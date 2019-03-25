@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from '../lib';
+import { Button, ButtonGroup } from '../lib';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { styled } from '../lib/style';
@@ -64,4 +64,19 @@ storiesOf('Components/Button', module).add(
       )}
     </ThemeCard>
   ),
-);
+  ).add(
+    'Button Group',
+    () => (
+      <ThemeCard>
+        {() => (
+          <DemoLayout>
+            <ButtonGroup>
+              <Button>One</Button>
+              <Button>Two</Button>
+              <Button>Three</Button>
+            </ButtonGroup>
+          </DemoLayout>
+        )}
+      </ThemeCard>
+    ),
+  );

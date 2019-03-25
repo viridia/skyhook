@@ -1,4 +1,5 @@
 export { Button } from './Button';
+export { ButtonGroup } from './ButtonGroup';
 export { CheckBox } from './CheckBox';
 export { Chip } from './Chip';
 export { Dialog } from './Dialog';
