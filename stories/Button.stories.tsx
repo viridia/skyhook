@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, ButtonGroup } from '../lib';
+import { Button, ButtonGroup, DiscloseButton, DismissButton } from '../lib';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { styled } from '../lib/style';
@@ -12,19 +12,15 @@ const DemoLayout = styled.div`
     margin-bottom: 8px;
   }
 
-  > header {
-    margin: .5rem 0;
-    color: ${p => p.theme.textNormal};
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
   svg {
     width: 20px;
   }
 `;
+
+function DiscloseDemo() {
+  const [open, setOpen] = React.useState(false);
+  return <DiscloseButton checked={open} onClick={() => setOpen(!open)} />;
+}
 
 storiesOf('Components/Button', module).add(
   'Button',
@@ -64,19 +60,33 @@ storiesOf('Components/Button', module).add(
       )}
     </ThemeCard>
   ),
-  ).add(
-    'Button Group',
-    () => (
-      <ThemeCard>
-        {() => (
-          <DemoLayout>
-            <ButtonGroup>
-              <Button>One</Button>
-              <Button>Two</Button>
-              <Button>Three</Button>
-            </ButtonGroup>
-          </DemoLayout>
-        )}
-      </ThemeCard>
-    ),
-  );
+).add(
+  'Button Group',
+  () => (
+    <ThemeCard>
+      {() => (
+        <DemoLayout>
+          <ButtonGroup>
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+          </ButtonGroup>
+        </DemoLayout>
+      )}
+    </ThemeCard>
+  ),
+).add(
+  'Disclose button',
+  () => (
+    <ThemeCard>
+      {() => <DiscloseDemo />}
+    </ThemeCard>
+  ),
+).add(
+  'Dismiss button',
+  () => (
+    <ThemeCard>
+      {() => <DismissButton />}
+    </ThemeCard>
+  ),
+);

@@ -3,6 +3,8 @@ export { ButtonGroup } from './ButtonGroup';
 export { CheckBox } from './CheckBox';
 export { Chip } from './Chip';
 export { Dialog } from './Dialog';
+export { DiscloseButton } from './DiscloseButton';
+export { DismissButton } from './DismissButton';
 export { Form } from './Form';
 export { FormLabel } from './FormLabel';
 export { FormGrid, FormControlGroup } from './FormGrid';

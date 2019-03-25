@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { ThemeProvider, styled } from '../lib/style';
+import { ThemeProvider, styled, createGlobalStyle } from '../lib/style';
 import { makeLight, makeDark } from '../lib/theme';
-import { createGlobalStyle } from 'styled-components';
 import { cover } from 'polished';
 
 const GlobalStyle = createGlobalStyle`
@@ -18,9 +17,20 @@ const ThemeLayout = styled.section`
 
 const CardEl = styled.section`
   background-color: ${p => p.theme.pageColor};
+  color: ${p => p.theme.textNormal};
   display: block;
   flex: 1;
   padding: 1rem;
+
+  header {
+    color: ${p => p.theme.textNormal};
+    font-weight: bold;
+    margin: .5rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 `;
 
 interface Props {
