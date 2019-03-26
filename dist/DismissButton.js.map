@@ -1,0 +1,1 @@
+{"version":3,"file":"DismissButton.js","sourceRoot":"","sources":["../lib/DismissButton.tsx"],"names":[],"mappings":";;;;;;;;;;;;;;;;;AAAA,6BAA+B;AAC/B,mCAA+C;AAC/C,uDAAuC;AACvC,oDAAiD;AAEpC,QAAA,kBAAkB,GAAG,2BAAM,CAAC,eAAM,CAAC,yWAAA,sSAiB/C,KAAC;AAEF,SAAgB,aAAa,CAAC,KAAkB;IAC9C,OAAO,oBAAC,0BAAkB,eAAK,KAAK;QAAE,oBAAC,iBAAS,OAAG,CAAqB,CAAC;AAC3E,CAAC;AAFD,sCAEC"}

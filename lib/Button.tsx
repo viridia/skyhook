@@ -1,18 +1,20 @@
 import * as React from 'react';
 import { styled } from './style';
 import { darken, saturate } from 'polished';
-import { ControlSize, ControlStyle, ControlHeight, FontHeight } from './variant';
+import { ControlSize, ControlHeight, FontHeight } from './variant';
+
+export type ButtonKind = 'action' | 'primary' | 'default';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ControlSize;
-  kind?: ControlStyle;
+  kind?: ButtonKind;
   type?: string;
 }
 
 const ButtonImpl =
     React.forwardRef(({ children, className, size, kind, ...attrs }: ButtonProps, ref: any) => {
   return (
-    <button className={className} {...attrs}>
+    <button ref={ref} className={className} {...attrs}>
       {children}
     </button>
   );

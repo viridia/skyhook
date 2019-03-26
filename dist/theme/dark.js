@@ -7,6 +7,7 @@ exports.makeDark = function (color, accent) {
     var shadow = polished_1.transparentize(0.7, darker);
     var c0 = polished_1.lighten(0.05, color);
     var c1 = polished_1.lighten(0.1, color);
+    var c2 = polished_1.lighten(0.15, color);
     // const c2 = lighten(0.2, color);
     var c9 = polished_1.mix(0.1, color, '#fff');
     return {
@@ -36,7 +37,18 @@ exports.makeDark = function (color, accent) {
             textColor: c9,
         },
         tab: null,
-        menu: null,
+        menu: {
+            bgColor: c0,
+            textColor: textColor,
+            borderColor: darker,
+            focusBgColor: c1,
+            focusTextColor: textColor,
+            hoverBgColor: c2,
+            hoverTextColor: textColor,
+            activeBgColor: c9,
+            activeTextColor: c1,
+            dividerColor: darker,
+        },
         dialog: {
             backdropColor: c1,
             bgColor: color,

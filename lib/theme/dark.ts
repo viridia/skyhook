@@ -7,6 +7,7 @@ export const makeDark = (color: string, accent: string): Theme => {
   const shadow = transparentize(0.7, darker);
   const c0 = lighten(0.05, color);
   const c1 = lighten(0.1, color);
+  const c2 = lighten(0.15, color);
   // const c2 = lighten(0.2, color);
   const c9 = mix(0.1, color, '#fff');
   return {
@@ -38,7 +39,19 @@ export const makeDark = (color: string, accent: string): Theme => {
     },
 
     tab: null,
-    menu: null,
+    menu: {
+      bgColor: c0,
+      textColor: textColor,
+      borderColor: darker,
+      focusBgColor: c1,
+      focusTextColor: textColor,
+      hoverBgColor: c2,
+      hoverTextColor: textColor,
+      activeBgColor: c9,
+      activeTextColor: c1,
+      dividerColor: darker,
+    },
+
     dialog: {
       backdropColor: c1,
       bgColor: color,

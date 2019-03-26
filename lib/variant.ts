@@ -1,4 +1,3 @@
-export type ControlStyle = 'action' | 'primary' | 'default';
 export type ControlSize = 'normal' | 'small' | 'smaller' | 'mini';
 
 export const ControlHeight = {

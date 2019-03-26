@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { ControlSize, ControlStyle } from './variant';
+import { ControlSize } from './variant';
+export declare type ButtonKind = 'action' | 'primary' | 'default';
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     size?: ControlSize;
-    kind?: ControlStyle;
+    kind?: ButtonKind;
     type?: string;
 }
 /** A standard button. */

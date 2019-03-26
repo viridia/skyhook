@@ -13,7 +13,7 @@ export const makeLight = (color: string, accent: string): Theme => {
   const c8 = mix(0.1, color, '#fff');
   return {
     pageColor: c8,
-    focusColor: c6,
+    focusColor: c5,
     textNormal: textColor,
 
     // Buttons
@@ -43,7 +43,18 @@ export const makeLight = (color: string, accent: string): Theme => {
     },
 
     tab: null,
-    menu: null,
+    menu: {
+      bgColor: c8,
+      textColor: textColor,
+      borderColor: c5,
+      focusBgColor: c6,
+      focusTextColor: textColor,
+      hoverBgColor: c5,
+      hoverTextColor: textColor,
+      activeBgColor: c1,
+      activeTextColor: c8,
+      dividerColor: c5,
+    },
     dialog: {
       backdropColor: c1,
       bgColor: c7,

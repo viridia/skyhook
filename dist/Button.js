@@ -30,7 +30,7 @@ var polished_1 = require("polished");
 var variant_1 = require("./variant");
 var ButtonImpl = React.forwardRef(function (_a, ref) {
     var children = _a.children, className = _a.className, size = _a.size, kind = _a.kind, attrs = __rest(_a, ["children", "className", "size", "kind"]);
-    return (React.createElement("button", __assign({ className: className }, attrs), children));
+    return (React.createElement("button", __assign({ ref: ref, className: className }, attrs), children));
 });
 /** A standard button. */
 exports.Button = style_1.styled(ButtonImpl)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  align-items: center;\n  border: ", ";\n  border-radius: 4px;\n  background-color: ", ";\n  color: ", ";\n  display: inline-flex;\n  font-family: ubuntu;\n  font-size: ", ";\n  padding: 0 12px;\n  height: ", ";\n  outline: none;\n  white-space: nowrap;\n\n  &[disabled] {\n    opacity: 0.6;\n    > svg {\n      opacity: 0.3;\n    }\n  }\n\n  &:focus {\n    box-shadow: 0 0 0 3px ", ";\n    z-index: 1;\n  }\n\n  &:hover:not([disabled]) {\n    background-color: ", ";\n  }\n\n  &:active:not([disabled]) {\n    background-color: ", ";\n  }\n\n  > svg {\n    margin-right: 4px;\n    margin-left: -5px;\n    fill: ", ";\n\n    &:only-child {\n      margin: 0;\n    }\n  }\n"], ["\n  align-items: center;\n  border: ",
