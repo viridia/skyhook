@@ -28,12 +28,13 @@ var React = require("react");
 var classnames_1 = require("classnames");
 var style_1 = require("./style");
 var RadioButtonImpl = React.forwardRef(function (_a, ref) {
-    var children = _a.children, className = _a.className, props = __rest(_a, ["children", "className"]);
+    var id = _a.id, children = _a.children, className = _a.className, checked = _a.checked, selected = _a.selected, props = __rest(_a, ["id", "children", "className", "checked", "selected"]);
     var disabled = props.disabled;
-    return (React.createElement("label", { className: classnames_1.default(className, { disabled: disabled }) },
-        React.createElement("input", __assign({ type: "radio", ref: ref }, props)),
+    return (React.createElement("label", { id: id, className: classnames_1.default(className, { disabled: disabled, selected: selected }), role: "radio", "aria-checked": checked },
+        React.createElement("input", __assign({ "aria-hidden": true, type: "radio", ref: ref }, props, { checked: checked })),
+        React.createElement("span", { "aria-hidden": true, className: "radio" }),
         React.createElement("span", { className: "caption" }, children)));
 });
-exports.RadioButton = style_1.styled(RadioButtonImpl)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  align-items: center;\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n\n  > input {\n    margin-right: 6px;\n  }\n\n  &.disabled {\n    cursor: default;\n    > .caption {\n      opacity: 0.7;\n    }\n  }\n"], ["\n  align-items: center;\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n\n  > input {\n    margin-right: 6px;\n  }\n\n  &.disabled {\n    cursor: default;\n    > .caption {\n      opacity: 0.7;\n    }\n  }\n"])), function (p) { return p.theme.textNormal; });
+exports.RadioButton = style_1.styled(RadioButtonImpl)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  align-items: center;\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  outline: none;\n\n  > input {\n    display: none;\n  }\n\n  > .radio {\n    background-color: ", ";\n    border: 1px solid ", ";\n    border-radius: 50%;\n    width: 16px;\n    height: 16px;\n    margin-right: 6px;\n  }\n\n  > input:checked ~ .radio:after {\n    content: \"\";\n    display: block;\n    background-color: ", ";\n    border-radius: 50%;\n    left: 3px;\n    top: 3px;\n    position: relative;\n    width: 10px;\n    height: 10px;\n  }\n\n  &.disabled {\n    cursor: default;\n    > .caption {\n      opacity: 0.7;\n    }\n  }\n"], ["\n  align-items: center;\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  outline: none;\n\n  > input {\n    display: none;\n  }\n\n  > .radio {\n    background-color: ", ";\n    border: 1px solid ", ";\n    border-radius: 50%;\n    width: 16px;\n    height: 16px;\n    margin-right: 6px;\n  }\n\n  > input:checked ~ .radio:after {\n    content: \"\";\n    display: block;\n    background-color: ", ";\n    border-radius: 50%;\n    left: 3px;\n    top: 3px;\n    position: relative;\n    width: 10px;\n    height: 10px;\n  }\n\n  &.disabled {\n    cursor: default;\n    > .caption {\n      opacity: 0.7;\n    }\n  }\n"])), function (p) { return p.theme.textNormal; }, function (p) { return p.theme.button.radio.bgColor; }, function (p) { return p.theme.button.radio.borderColor; }, function (p) { return p.theme.button.radio.textColor; });
 var templateObject_1;
 //# sourceMappingURL=RadioButton.js.map

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CheckBox, RadioButton, ToggleSwitch } from '../lib';
+import { CheckBox, RadioButton, ToggleSwitch, RadioButtonGroup } from '../lib';
 import { storiesOf } from '@storybook/react';
 import { ThemeCard } from './ThemeCard';
 
@@ -7,12 +7,33 @@ function ToggleDemo() {
   const [checked, setChecked] = React.useState(false);
   return (
     <div>
-      <div>Normal</div>
+      <header>Normal</header>
       <ToggleSwitch checked={checked} onClick={() => setChecked(!checked)} />
-      <div>Disabled</div>
+      <header>Disabled</header>
       <ToggleSwitch disabled={true} />
     </div>
+  )
+}
 
+function RadioDemo() {
+  const [selected, setSelected] = React.useState(1);
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <RadioButton checked={selected == 1} onChange={() => setSelected(1)}>Alpha</RadioButton>
+      <RadioButton checked={selected == 2} onChange={() => setSelected(2)}>Beta</RadioButton>
+      <RadioButton checked={selected == 3} onChange={() => setSelected(3)}>Gamma</RadioButton>
+    </div>
+  )
+}
+
+function RadioGroupDemo() {
+  const [value, setValue] = React.useState('b');
+  return (
+    <RadioButtonGroup id="demo" value={value} onChange={v => setValue(v)}>
+      <RadioButton value="a">Alpha</RadioButton>
+      <RadioButton value="b">Beta</RadioButton>
+      <RadioButton value="c">Gamma</RadioButton>
+    </RadioButtonGroup>
   )
 }
 
@@ -30,7 +51,12 @@ storiesOf('Components/Input', module).add(
   () => (
     <ThemeCard>
       {() => (
-        <RadioButton>Radio</RadioButton>
+        <section>
+          <header>Radio Button</header>
+          <RadioDemo />
+          <header>Radio Button Group</header>
+          <RadioGroupDemo />
+        </section>
       )}
     </ThemeCard>
   ),

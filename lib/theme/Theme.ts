@@ -5,20 +5,21 @@ export interface ButtonColors {
   borderColor?: string;
 }
 
+/** Theme properties for buttons. */
+export interface ButtonTheme {
+  default: ButtonColors;
+  action: ButtonColors;
+  primary: ButtonColors;
+  radio: ButtonColors;
+  roundCorners?: boolean;
+}
+
 /** Colors for toggle switch. */
 export interface ToggleSwitchColors {
   slideColor: string;
   thumbColor: string;
   checkedSlideColor: string;
   checkedThumbColor: string;
-}
-
-/** Theme properties for buttons. */
-export interface ButtonTheme {
-  default: ButtonColors;
-  action: ButtonColors;
-  primary: ButtonColors;
-  roundCorners?: boolean;
 }
 
 /** Theme properties for progress bars. */

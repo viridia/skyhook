@@ -1,3 +1,4 @@
+export { AutoNavigate } from './AutoNavigate';
 export { Button } from './Button';
 export { ButtonGroup } from './ButtonGroup';
 export { CheckBox } from './CheckBox';
@@ -12,7 +13,9 @@ export { FormGrid, FormControlGroup } from './FormGrid';
 export { Menu, MenuItem, MenuDivider } from './Menu';
 export { ProgressBar } from './ProgressBar';
 export { RadioButton } from './RadioButton';
+export { RadioButtonGroup } from './RadioButtonGroup';
 export { Spacer } from './Spacer';
 export { TextArea } from './TextArea';
 export { TextInput } from './TextInput';
+export { ToggleSwitch } from './ToggleSwitch';
 export { ValidationMsg } from './ValidationMsg';

@@ -11,7 +11,13 @@ interface Props {
 
 function ToggleSwitchImpl({ checked, disabled, className, ...props }: Props) {
   return (
-    <button {...props} className={classNames(className, { checked })} disabled={disabled}>
+    <button
+      {...props}
+      className={classNames(className, { checked })}
+      disabled={disabled}
+      role="switch"
+      aria-checked={checked}
+    >
       <div className="slide" />
       <div className="thumb" />
     </button>

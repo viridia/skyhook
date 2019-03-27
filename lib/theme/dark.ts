@@ -22,7 +22,7 @@ export const makeDark = (color: string, accent: string): Theme => {
       default: {
         bgColor: c0,
         textColor: c9,
-        borderColor: lighten(0.1, color),
+        borderColor: c1,
       },
       primary: {
         bgColor: c1,
@@ -31,6 +31,11 @@ export const makeDark = (color: string, accent: string): Theme => {
       action: {
         bgColor: accent,
         textColor: c9,
+      },
+      radio: {
+        bgColor: c0,
+        textColor: c8,
+        borderColor: c3,
       },
     },
 

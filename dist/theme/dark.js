@@ -4,22 +4,24 @@ var polished_1 = require("polished");
 exports.makeDark = function (color, accent) {
     var textColor = '#fff';
     var darker = polished_1.mix(0.8, color, '#000');
-    var shadow = polished_1.transparentize(0.7, darker);
+    var shadow = polished_1.transparentize(0.5, darker);
     var c0 = polished_1.lighten(0.05, color);
     var c1 = polished_1.lighten(0.1, color);
     var c2 = polished_1.lighten(0.15, color);
+    var c3 = polished_1.lighten(0.2, color);
     // const c5 = lighten(0.4, color);
-    // const c8 = mix(0.2, color, '#fff');
+    var c8 = polished_1.mix(0.2, color, '#fff');
     var c9 = polished_1.mix(0.1, color, '#fff');
     return {
         pageColor: color,
         focusColor: c1,
         textNormal: textColor,
+        shadowColor: shadow,
         button: {
             default: {
                 bgColor: c0,
                 textColor: c9,
-                borderColor: polished_1.lighten(0.1, color),
+                borderColor: c1,
             },
             primary: {
                 bgColor: c1,
@@ -28,6 +30,11 @@ exports.makeDark = function (color, accent) {
             action: {
                 bgColor: accent,
                 textColor: c9,
+            },
+            radio: {
+                bgColor: c0,
+                textColor: c8,
+                borderColor: c3,
             },
         },
         textField: {
@@ -51,12 +58,17 @@ exports.makeDark = function (color, accent) {
             borderColor: darker,
             headerBgColor: c0,
             headerTextColor: textColor,
-            shadowColor: shadow,
         },
         progress: {
             trackColor: darker,
             thumbColor: c2,
             textColor: textColor,
+        },
+        toggle: {
+            slideColor: '#000',
+            thumbColor: polished_1.desaturate(0.2, c3),
+            checkedSlideColor: c0,
+            checkedThumbColor: c8,
         },
     };
 };

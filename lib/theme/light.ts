@@ -35,6 +35,11 @@ export const makeLight = (color: string, accent: string): Theme => {
         textColor: c8,
         borderColor: darken(0.1, accent),
       },
+      radio: {
+        bgColor: c7,
+        textColor: c1,
+        borderColor: c4,
+      },
 
       roundCorners: true,
     },
