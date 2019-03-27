@@ -3,15 +3,15 @@ import { styled } from './style';
 import { darken, saturate } from 'polished';
 import { SizeVariant, ControlHeight, FontHeight } from './variant';
 
-export type ButtonKind = 'action' | 'primary' | 'default';
+export type StyleVariant = 'action' | 'primary' | 'default';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: SizeVariant;
-  kind?: ButtonKind;
+  variant?: StyleVariant;
 }
 
 const ButtonImpl =
-    React.forwardRef(({ children, className, size, kind, ...attrs }: ButtonProps, ref: any) => {
+    React.forwardRef(({ children, className, size, variant: kind, ...attrs }: ButtonProps, ref: any) => {
   return (
     <button ref={ref} className={className} {...attrs}>
       {children}
@@ -23,12 +23,12 @@ const ButtonImpl =
 export const Button = styled(ButtonImpl)`
   align-items: center;
   border: ${p => {
-    const kind = p.theme.button[p.kind];
+    const kind = p.theme.button[p.variant];
     return kind && kind.borderColor ? `1px solid ${kind.borderColor}` : 'none'}
   };
   border-radius: ${p => p.theme.button.roundCorners ? '4px' : 0};
-  background-color: ${p => p.theme.button[p.kind].bgColor};
-  color: ${p => p.theme.button[p.kind].textColor};
+  background-color: ${p => p.theme.button[p.variant].bgColor};
+  color: ${p => p.theme.button[p.variant].textColor};
   display: inline-flex;
   font-family: ubuntu;
   font-size: ${p => FontHeight[p.size]};
@@ -50,18 +50,18 @@ export const Button = styled(ButtonImpl)`
   }
 
   &:hover:not([disabled]) {
-    background-color: ${p => darken(0.05, p.theme.button[p.kind].bgColor)};
+    background-color: ${p => darken(0.05, p.theme.button[p.variant].bgColor)};
   }
 
   &:active:not([disabled]) {
     background-color: ${p =>
-        saturate(0.1, darken(0.15, p.theme.button[p.kind].bgColor))};
+        saturate(0.1, darken(0.15, p.theme.button[p.variant].bgColor))};
   }
 
   > svg {
     margin-right: 4px;
     margin-left: -5px;
-    fill: ${p => p.theme.button[p.kind].textColor};
+    fill: ${p => p.theme.button[p.variant].textColor};
 
     &:only-child {
       margin: 0;
@@ -70,6 +70,6 @@ export const Button = styled(ButtonImpl)`
 `;
 
 Button.defaultProps = {
-  kind: 'default',
+  variant: 'default',
   size: 'normal',
 };

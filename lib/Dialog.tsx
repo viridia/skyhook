@@ -124,7 +124,7 @@ const DialogEl = styled.div`
   background-color: ${p => p.theme.dialog.bgColor};
   border: 1px solid ${p => p.theme.dialog.borderColor};
   border-radius: 6px;
-  box-shadow: 1px 2px 6px 6px ${p => p.theme.dialog.shadowColor};
+  box-shadow: 1px 2px 6px 6px ${p => p.theme.shadowColor};
   display: flex;
   flex-direction: column;
   max-height: 95%;

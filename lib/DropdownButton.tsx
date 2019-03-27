@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Dropdown as OverlayDropdown } from 'react-overlays';
-import { Button, ButtonKind } from './Button';
+import { Button, StyleVariant } from './Button';
 import { styled } from './style';
 import { Menu } from './Menu';
 import { SizeVariant } from 'variant';
@@ -14,7 +14,7 @@ export interface DropdownButtonProps {
   alignEnd?: boolean;
   disabled?: boolean;
   drop?: 'up' | 'left' | 'right' | 'down';
-  kind?: ButtonKind;
+  kind?: StyleVariant;
   size?: SizeVariant;
   id?: string;
   className?: string;
@@ -75,7 +75,7 @@ export function DropdownButton({
           <OverlayDropdown.Toggle>
             {({ toggle, props: buttonProps }) => (
               <DropdownButtonEl
-                  kind={kind}
+                  variant={kind}
                   size={size}
                   disabled={disabled}
                   className={className}

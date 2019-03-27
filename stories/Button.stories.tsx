@@ -31,8 +31,8 @@ storiesOf('Components/Button', module)
           <DemoLayout>
             <header>Button Kinds</header>
             <Button onClick={action('button-click')}>Default</Button>
-            <Button onClick={action('button-click')} kind="primary">Primary</Button>
-            <Button onClick={action('button-click')} kind="action">Action</Button>
+            <Button onClick={action('button-click')} variant="primary">Primary</Button>
+            <Button onClick={action('button-click')} variant="action">Action</Button>
             <header>Button Sizes</header>
             <Button onClick={action('button-click')}>Normal</Button>
             <Button onClick={action('button-click')} size="small">Small</Button>
@@ -50,8 +50,8 @@ storiesOf('Components/Button', module)
           <DemoLayout>
             <header>Button Kinds</header>
             <Button onClick={action('button-click')}><IconClose />Default</Button>
-            <Button onClick={action('button-click')} kind="primary"><IconClose />Primary</Button>
-            <Button onClick={action('button-click')} kind="action"><IconClose />Action</Button>
+            <Button onClick={action('button-click')} variant="primary"><IconClose />Primary</Button>
+            <Button onClick={action('button-click')} variant="action"><IconClose />Action</Button>
             <header>Button Sizes</header>
             <Button onClick={action('button-click')}><IconClose />Normal</Button>
             <Button onClick={action('button-click')} size="small"><IconClose />Small</Button>

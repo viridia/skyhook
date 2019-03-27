@@ -7,7 +7,7 @@ the ```<Button>``` component defines the following optional properties:
 
 | Name | Meaning | Value |
 | -- | -- | -- |
-| kind | Style variant | One of ```default```, ```primary```, or ```action``` |
+| variant | Style variant | One of ```default```, ```primary```, or ```action``` |
 | size | Button size | One of ```normal```, ```small```, ```smaller``` or ```mini``` |
 
 * The 'default' variant renders a plain button that does not call attention to itself. This would
@@ -60,18 +60,63 @@ Chips have the following attributes:
 
 The Chip will only display a close button if a close callback has been provided.
 
-## TODO
-## Dialog
 ## Forms
 
+### Form
+
+The ```<Form>``` component renders a standard HTML form, however the internal layout can be changed
+via the 'layout' attribute:
+
+* ```ledger```: Arrange the controls in a grid with labels on the left, and input fields on
+  the right (uses CSS grid). Individual components can control whether they are considered as
+  labels or controls for layour purposes by setting the CSS 'grid-column' property.
+* ```row``: Arrange the labels and controls in a row (uses a CSS flexbox).
+* ```column``: Arrange the labels and controls in a column, aligned to the left (uses a CSS flexbox).
+* ```stack``: Arrange the labels and controls in a column, centered (uses a CSS flexbox).
+* ```inline``: Uses inline layout for all children.
+
 ```js
-export { CheckBox } from './CheckBox';
-export { Chip } from './Chip';
+<Form layout="ledger" onSubmit={() => console.log('submitted')}>
+  <AutoNavigate />
+  <FormLabel>Street:</FormLabel>
+  <TextInput value={street} onChange={() => setStreet(e.target.value)} />
+  <FormLabel>City:</FormLabel>
+  <TextInput value={city} onChange={() => setCity(e.target.value)} />
+  <FormLabel>Misc:</FormLabel>
+  <FormControlGroup>Misc text</FormControlGroup>
+</Button>
+```
+
+### FormGrid
+
+If you want to use the layout logic without an actual HTML form element, use ```<FormGrid>```.
+
+### FormLabel
+
+A label for a form input element. This will be placed in the 'labels' column in ```ledger```
+form layouts.
+
+### FormControlGroup
+
+Wrap a component with ```<FormControlGroup>``` to force it to be placed in the 'controls'
+column.
+
+Note that text input fields, checkboxes and radio buttons are automatically considered controls
+for layout purposes.
+
+### AutoNavigate
+
+Placing an ```<AutoNavigate>``` component inside of a ```<Form>``` will cause the Enter key to
+move focus to the next input field. If the focus is currently on the last field of the form,
+pressing Enter will trigger the form's submit event.
+
+
+## TODO
+## Dialog
+
+```js
 export { Dialog } from './Dialog';
 export { DiscloseButton } from './DiscloseButton';
-export { Form } from './Form';
-export { FormLabel } from './FormLabel';
-export { FormGrid, FormControlGroup } from './FormGrid';
 export { Menu, MenuItem, MenuDivider } from './Menu';
 export { RadioButton } from './RadioButton';
 export { Spacer } from './Spacer';

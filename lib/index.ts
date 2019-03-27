@@ -1,3 +1,4 @@
+export { AutoNavigate } from './AutoNavigate';
 export { Button } from './Button';
 export { ButtonGroup } from './ButtonGroup';
 export { CheckBox } from './CheckBox';
@@ -15,4 +16,5 @@ export { RadioButton } from './RadioButton';
 export { Spacer } from './Spacer';
 export { TextArea } from './TextArea';
 export { TextInput } from './TextInput';
+export { ToggleSwitch } from './ToggleSwitch';
 export { ValidationMsg } from './ValidationMsg';

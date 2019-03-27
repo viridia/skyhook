@@ -5,6 +5,14 @@ export interface ButtonColors {
   borderColor?: string;
 }
 
+/** Colors for toggle switch. */
+export interface ToggleSwitchColors {
+  slideColor: string;
+  thumbColor: string;
+  checkedSlideColor: string;
+  checkedThumbColor: string;
+}
+
 /** Theme properties for buttons. */
 export interface ButtonTheme {
   default: ButtonColors;
@@ -27,7 +35,6 @@ export interface DialogTheme {
   borderColor: string;
   headerBgColor: string;
   headerTextColor: string;
-  shadowColor: string;
 }
 
 /** Theme properties for dialogs. */
@@ -53,11 +60,13 @@ export interface TextField {
 export interface Theme {
   pageColor: string;
   focusColor: string;
+  shadowColor: string;
   textNormal: string;
 
   button: ButtonTheme;
-  progress: ProgressTheme;
   dialog: DialogTheme;
   menu: MenuTheme;
+  progress: ProgressTheme;
   textField: TextField;
+  toggle: ToggleSwitchColors;
 }

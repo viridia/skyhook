@@ -5,7 +5,10 @@
 * Custom appearance for Checkbox
 * Custom appearance for Radio button
 * Radio button group
-* Toggle switch
 * Demo showing many controls.
 * Autocomplete
 * Cards?
+* Alerts
+* Pagination
+* Tooltip
+* SplitButton

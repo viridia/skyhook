@@ -1,20 +1,23 @@
 import { Theme } from './Theme';
-import { darken, lighten, mix, transparentize } from 'polished';
+import { darken, lighten, mix, transparentize, desaturate } from 'polished';
 
 export const makeDark = (color: string, accent: string): Theme => {
   const textColor = '#fff';
   const darker = mix(0.8, color, '#000');
-  const shadow = transparentize(0.7, darker);
+  const shadow = transparentize(0.5, darker);
   const c0 = lighten(0.05, color);
   const c1 = lighten(0.1, color);
   const c2 = lighten(0.15, color);
+  const c3 = lighten(0.2, color);
   // const c5 = lighten(0.4, color);
-  // const c8 = mix(0.2, color, '#fff');
+  const c8 = mix(0.2, color, '#fff');
   const c9 = mix(0.1, color, '#fff');
   return {
     pageColor: color,
     focusColor: c1,
     textNormal: textColor,
+    shadowColor: shadow,
+
     button: {
       default: {
         bgColor: c0,
@@ -54,13 +57,19 @@ export const makeDark = (color: string, accent: string): Theme => {
       borderColor: darker,
       headerBgColor: c0,
       headerTextColor: textColor,
-      shadowColor: shadow,
     },
 
     progress: {
       trackColor: darker,
       thumbColor: c2,
       textColor: textColor,
+    },
+
+    toggle: {
+      slideColor: '#000',
+      thumbColor: desaturate(0.2, c3),
+      checkedSlideColor: c0,
+      checkedThumbColor: c8,
     },
   }
 };

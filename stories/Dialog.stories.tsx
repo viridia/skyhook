@@ -19,8 +19,8 @@ function DialogDemo() {
         <Dialog.Header hasClose={true}>Dialog Header</Dialog.Header>
         <Dialog.Body>Dialog body text</Dialog.Body>
         <Dialog.Footer>
-          <Button kind="default" onClick={() => setOpen(false)}>Cancel</Button>
-          <Button kind="primary" onClick={() => setOpen(false)}>OK</Button>
+          <Button variant="default" onClick={() => setOpen(false)}>Cancel</Button>
+          <Button variant="primary" onClick={() => setOpen(false)}>OK</Button>
         </Dialog.Footer>
       </Dialog>
     </DemoLayout>

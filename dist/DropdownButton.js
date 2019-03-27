@@ -48,7 +48,7 @@ function DropdownButton(_a) {
         return (React.createElement(DropdownContainer, __assign({}, props),
             React.createElement(react_overlays_1.Dropdown.Toggle, null, function (_a) {
                 var toggle = _a.toggle, buttonProps = _a.props;
-                return (React.createElement(DropdownButtonEl, __assign({ kind: kind, size: size, disabled: disabled, className: className }, buttonProps, { onClick: function (e) { e.preventDefault(); toggle(e); } }),
+                return (React.createElement(DropdownButtonEl, __assign({ variant: kind, size: size, disabled: disabled, className: className }, buttonProps, { onClick: function (e) { e.preventDefault(); toggle(e); } }),
                     React.createElement("span", { className: "title" }, title),
                     React.createElement("span", { className: "down-arrow" }, "\u25BE")));
             }),
