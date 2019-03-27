@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DropdownButton, MenuItem, MenuDivider } from '../lib';
+import { DropdownButton, MenuItem, MenuDivider, Menu } from '../lib';
 import { storiesOf } from '@storybook/react';
 import { styled } from '../lib/style';
 import { ThemeCard } from './ThemeCard';
@@ -9,10 +9,11 @@ const DemoLayout = styled.div`
     margin-right: 8px;
     margin-bottom: 8px;
   }
+`;
 
-  svg {
-    width: 20px;
-  }
+const FixedMenu = styled(Menu)`
+  position: relative;
+  width: 10rem;
 `;
 
 storiesOf('Components/Menu', module).add(
@@ -27,6 +28,35 @@ storiesOf('Components/Menu', module).add(
             <MenuDivider />
             <MenuItem onClick={() => { console.info('Choose Last'); }}>Last</MenuItem>
           </DropdownButton>
+        </DemoLayout>
+      )}
+    </ThemeCard>
+  ),
+).add(
+  'Menus',
+  () => (
+    <ThemeCard>
+      {() => (
+        <DemoLayout>
+          <header>Active Menu</header>
+          <FixedMenu>
+            <MenuItem>First</MenuItem>
+            <MenuItem active={true}>Middle</MenuItem>
+            <MenuItem>Last</MenuItem>
+          </FixedMenu>
+          <header>Checkable Menu</header>
+          <FixedMenu checkable>
+            <MenuItem>First</MenuItem>
+            <MenuItem active={true}>Middle</MenuItem>
+            <MenuItem>Last</MenuItem>
+          </FixedMenu>
+          <header>Divider</header>
+          <FixedMenu>
+            <MenuItem>First</MenuItem>
+            <MenuItem active={true}>Middle</MenuItem>
+            <MenuDivider />
+            <MenuItem>Last</MenuItem>
+          </FixedMenu>
         </DemoLayout>
       )}
     </ThemeCard>

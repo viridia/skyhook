@@ -6,6 +6,7 @@ export const makeLight = (color: string, accent: string): Theme => {
   const textColor = '#222';
   const shadow = transparentize(0.7, mix(0.3, color, '#000'));
   const c1 = darken(0.3, color);
+  // const c2 = darken(0.2, color);
   const c4 = mix(0.7, color, '#fff');
   const c5 = mix(0.4, color, '#fff');
   const c6 = mix(0.3, color, '#fff');
@@ -16,7 +17,6 @@ export const makeLight = (color: string, accent: string): Theme => {
     focusColor: c5,
     textNormal: textColor,
 
-    // Buttons
     button: {
       default: {
         bgColor: c7,
@@ -33,16 +33,16 @@ export const makeLight = (color: string, accent: string): Theme => {
         textColor: c8,
         borderColor: darken(0.1, accent),
       },
+
+      roundCorners: true,
     },
 
-    // Text inputs
     textField: {
       bgColor: '#fff',
       borderColor: c7,
       textColor,
     },
 
-    tab: null,
     menu: {
       bgColor: c8,
       textColor: textColor,
@@ -51,10 +51,9 @@ export const makeLight = (color: string, accent: string): Theme => {
       focusTextColor: textColor,
       hoverBgColor: c5,
       hoverTextColor: textColor,
-      activeBgColor: c1,
-      activeTextColor: c8,
       dividerColor: c5,
     },
+
     dialog: {
       backdropColor: c1,
       bgColor: c7,
@@ -63,6 +62,11 @@ export const makeLight = (color: string, accent: string): Theme => {
       headerTextColor: textColor,
       shadowColor: shadow,
     },
-    progress: null,
+
+    progress: {
+      trackColor: c6,
+      thumbColor: c4,
+      textColor: textColor,
+    },
   }
 };

@@ -1,23 +1,21 @@
-/** Theme properties for buttons. */
-export interface ButtonTheme {
+/** Colors for different buttons variants. */
+export interface ButtonColors {
     bgColor: string;
     textColor: string;
     borderColor?: string;
+}
+/** Theme properties for buttons. */
+export interface ButtonTheme {
+    default: ButtonColors;
+    action: ButtonColors;
+    primary: ButtonColors;
+    roundCorners?: boolean;
 }
 /** Theme properties for progress bars. */
 export interface ProgressTheme {
     trackColor: string;
     thumbColor: string;
     textColor: string;
-}
-/** Theme properties for tabs. */
-export interface TabTheme {
-    textColor: string;
-    bgColor: string;
-    borderColor: string;
-    activeTextColor: string;
-    activeBgColor: string;
-    activeBorderColor: string;
 }
 /** Theme properties for dialogs. */
 export interface DialogTheme {
@@ -37,8 +35,6 @@ export interface MenuTheme {
     focusTextColor: string;
     hoverBgColor: string;
     hoverTextColor: string;
-    activeBgColor: string;
-    activeTextColor: string;
     dividerColor: string;
 }
 /** Theme properties for text fields. */
@@ -52,13 +48,8 @@ export interface Theme {
     pageColor: string;
     focusColor: string;
     textNormal: string;
-    button: {
-        default: ButtonTheme;
-        action: ButtonTheme;
-        primary: ButtonTheme;
-    };
+    button: ButtonTheme;
     progress: ProgressTheme;
-    tab: TabTheme;
     dialog: DialogTheme;
     menu: MenuTheme;
     textField: TextField;

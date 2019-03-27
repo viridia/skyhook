@@ -1,4 +1,4 @@
-export declare type ControlSize = 'normal' | 'small' | 'smaller' | 'mini';
+export declare type SizeVariant = 'normal' | 'small' | 'smaller' | 'mini';
 export declare const ControlHeight: {
     'normal': string;
     'small': string;

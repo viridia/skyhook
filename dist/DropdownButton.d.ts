@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { ButtonKind } from './Button';
-import { ControlSize } from 'variant';
+import { SizeVariant } from 'variant';
 export interface DropdownButtonProps {
     alignEnd?: boolean;
     disabled?: boolean;
     drop?: 'up' | 'left' | 'right' | 'down';
     kind?: ButtonKind;
-    size?: ControlSize;
+    size?: SizeVariant;
     id?: string;
     className?: string;
     children: React.ReactNode;

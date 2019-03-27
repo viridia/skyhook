@@ -2,10 +2,20 @@ import * as React from 'react';
 import { styled } from './style';
 import classNames from 'classnames';
 
+interface Props extends React.InputHTMLAttributes<HTMLDivElement> {
+  checkable?: boolean;
+}
+
+const MenuImpl = React.forwardRef(({ children, className, checkable, ...props }: Props, ref: any) => {
+  return (
+    <div {...props} ref={ref} role="menu" className={classNames(className, { checkable })}>
+      {children}
+    </div>
+  );
+});
+
 /** Drop-down menu class. */
-export const Menu = styled.div.attrs(() => ({
-  role: 'menu'
-}))`
+export const Menu = styled(MenuImpl)`
   background-color: ${props => props.theme.menu.bgColor};
   border: 1px solid ${props => props.theme.menu.borderColor};
   border-radius: 3px;
@@ -49,9 +59,9 @@ export function MenuItemImpl({ onClick, active, eventKey, className, ...props }:
 }
 
 /** Menu item. */
-export const MenuItem = styled(MenuItemImpl).attrs(() => ({
+export const MenuItem = styled(MenuItemImpl).attrs({
   tabIndex: -1,
-}))`
+})`
   background-color: transparent;
   border: none;
   color: ${props => props.theme.menu.textColor};
@@ -79,10 +89,17 @@ export const MenuItem = styled(MenuItemImpl).attrs(() => ({
     color: ${props => props.theme.menu.focusTextColor};
   }
 
-  &.active {
-    background-color: ${props => props.theme.menu.activeBgColor};
-    color: ${props => props.theme.menu.activeTextColor};
-    font-weight: bold;
+  .checkable > & {
+    margin-left: 1.5rem;
+
+    &.active {
+      &::before {
+        content: '\u2713';
+        position: absolute;
+        left: 12px;
+      }
+      font-weight: bold;
+    }
   }
 `;
 

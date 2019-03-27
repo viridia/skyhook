@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { ControlSize } from 'variant';
+import { SizeVariant } from 'variant';
 interface Props {
     children: React.ReactNode;
     className?: string;
     color?: string;
-    size?: ControlSize;
+    size?: SizeVariant;
     onClose?: () => void;
 }
 declare function ChipImpl({ children, className, onClose, size }: Props): JSX.Element;

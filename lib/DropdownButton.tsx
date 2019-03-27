@@ -3,7 +3,7 @@ import { Dropdown as OverlayDropdown } from 'react-overlays';
 import { Button, ButtonKind } from './Button';
 import { styled } from './style';
 import { Menu } from './Menu';
-import { ControlSize } from 'variant';
+import { SizeVariant } from 'variant';
 
 const DropdownContainer = styled.div`
   position: relative;
@@ -15,7 +15,7 @@ export interface DropdownButtonProps {
   disabled?: boolean;
   drop?: 'up' | 'left' | 'right' | 'down';
   kind?: ButtonKind;
-  size?: ControlSize;
+  size?: SizeVariant;
   id?: string;
   className?: string;
   children: React.ReactNode;

@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { styled } from './style';
 import { darken, saturate } from 'polished';
-import { ControlSize, ControlHeight, FontHeight } from './variant';
+import { SizeVariant, ControlHeight, FontHeight } from './variant';
 
 export type ButtonKind = 'action' | 'primary' | 'default';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: ControlSize;
+  size?: SizeVariant;
   kind?: ButtonKind;
-  type?: string;
 }
 
 const ButtonImpl =
@@ -27,7 +26,7 @@ export const Button = styled(ButtonImpl)`
     const kind = p.theme.button[p.kind];
     return kind && kind.borderColor ? `1px solid ${kind.borderColor}` : 'none'}
   };
-  border-radius: 4px;
+  border-radius: ${p => p.theme.button.roundCorners ? '4px' : 0};
   background-color: ${p => p.theme.button[p.kind].bgColor};
   color: ${p => p.theme.button[p.kind].textColor};
   display: inline-flex;

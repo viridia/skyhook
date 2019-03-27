@@ -3,13 +3,13 @@ import { styled } from './style';
 import { transparentize } from 'polished';
 import { contrastingColor } from './theme/contrastingColor';
 import classNames from 'classnames';
-import { ControlSize } from 'variant';
+import { SizeVariant } from 'variant';
 
 interface Props {
   children: React.ReactNode;
   className?: string;
   color?: string;
-  size?: ControlSize;
+  size?: SizeVariant;
   onClose?: () => void;
 }
 

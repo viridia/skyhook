@@ -8,7 +8,8 @@ export const makeDark = (color: string, accent: string): Theme => {
   const c0 = lighten(0.05, color);
   const c1 = lighten(0.1, color);
   const c2 = lighten(0.15, color);
-  // const c2 = lighten(0.2, color);
+  // const c5 = lighten(0.4, color);
+  // const c8 = mix(0.2, color, '#fff');
   const c9 = mix(0.1, color, '#fff');
   return {
     pageColor: color,
@@ -18,17 +19,15 @@ export const makeDark = (color: string, accent: string): Theme => {
       default: {
         bgColor: c0,
         textColor: c9,
-        borderColor: darken(0.03, color),
+        borderColor: lighten(0.1, color),
       },
       primary: {
         bgColor: c1,
         textColor: c9,
-        borderColor: darken(0.03, color),
       },
       action: {
         bgColor: accent,
         textColor: c9,
-        borderColor: darken(0.03, color),
       },
     },
 
@@ -38,7 +37,6 @@ export const makeDark = (color: string, accent: string): Theme => {
       textColor: c9,
     },
 
-    tab: null,
     menu: {
       bgColor: c0,
       textColor: textColor,
@@ -47,8 +45,6 @@ export const makeDark = (color: string, accent: string): Theme => {
       focusTextColor: textColor,
       hoverBgColor: c2,
       hoverTextColor: textColor,
-      activeBgColor: c9,
-      activeTextColor: c1,
       dividerColor: darker,
     },
 
@@ -60,6 +56,11 @@ export const makeDark = (color: string, accent: string): Theme => {
       headerTextColor: textColor,
       shadowColor: shadow,
     },
-    progress: null,
+
+    progress: {
+      trackColor: darker,
+      thumbColor: c2,
+      textColor: textColor,
+    },
   }
 };

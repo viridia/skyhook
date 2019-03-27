@@ -10,6 +10,7 @@ export { Form } from './Form';
 export { FormLabel } from './FormLabel';
 export { FormGrid, FormControlGroup } from './FormGrid';
 export { Menu, MenuItem, MenuDivider } from './Menu';
+export { ProgressBar } from './ProgressBar';
 export { RadioButton } from './RadioButton';
 export { Spacer } from './Spacer';
 export { TextArea } from './TextArea';

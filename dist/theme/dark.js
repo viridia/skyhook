@@ -8,7 +8,8 @@ exports.makeDark = function (color, accent) {
     var c0 = polished_1.lighten(0.05, color);
     var c1 = polished_1.lighten(0.1, color);
     var c2 = polished_1.lighten(0.15, color);
-    // const c2 = lighten(0.2, color);
+    // const c5 = lighten(0.4, color);
+    // const c8 = mix(0.2, color, '#fff');
     var c9 = polished_1.mix(0.1, color, '#fff');
     return {
         pageColor: color,
@@ -18,17 +19,15 @@ exports.makeDark = function (color, accent) {
             default: {
                 bgColor: c0,
                 textColor: c9,
-                borderColor: polished_1.darken(0.03, color),
+                borderColor: polished_1.lighten(0.1, color),
             },
             primary: {
                 bgColor: c1,
                 textColor: c9,
-                borderColor: polished_1.darken(0.03, color),
             },
             action: {
                 bgColor: accent,
                 textColor: c9,
-                borderColor: polished_1.darken(0.03, color),
             },
         },
         textField: {
@@ -36,7 +35,6 @@ exports.makeDark = function (color, accent) {
             borderColor: c1,
             textColor: c9,
         },
-        tab: null,
         menu: {
             bgColor: c0,
             textColor: textColor,
@@ -45,8 +43,6 @@ exports.makeDark = function (color, accent) {
             focusTextColor: textColor,
             hoverBgColor: c2,
             hoverTextColor: textColor,
-            activeBgColor: c9,
-            activeTextColor: c1,
             dividerColor: darker,
         },
         dialog: {
@@ -57,7 +53,11 @@ exports.makeDark = function (color, accent) {
             headerTextColor: textColor,
             shadowColor: shadow,
         },
-        progress: null,
+        progress: {
+            trackColor: darker,
+            thumbColor: c2,
+            textColor: textColor,
+        },
     };
 };
 //# sourceMappingURL=dark.js.map
