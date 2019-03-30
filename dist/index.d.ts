@@ -19,3 +19,4 @@ export { TextArea } from './TextArea';
 export { TextInput } from './TextInput';
 export { ToggleSwitch } from './ToggleSwitch';
 export { ValidationMsg } from './ValidationMsg';
+export { styled, css, createGlobalStyle, keyframes, ThemeProvider, Theme } from './style';

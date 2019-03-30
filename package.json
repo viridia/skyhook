@@ -2,7 +2,8 @@
   "name": "skyhook-ui",
   "version": "1.0.1",
   "description": "Themable UI framework built with styled-components.",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/",
   "scripts": {
     "build": "tsc --project ./tsconfig.dist.json",
     "build-storybook": "build-storybook -c .storybook -o docs/storybook",
