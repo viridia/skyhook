@@ -27,6 +27,15 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var classnames_1 = require("classnames");
@@ -42,12 +51,14 @@ var DialogTransition = function (props) {
 var CloseButton = style_1.styled.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  border: none;\n  background: none;\n  outline: none;\n  padding: 0 4px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 32px;\n  > svg {\n    height: 24px;\n    fill: ", ";\n  }\n\n  &:hover > svg {\n    fill: ", ";\n  }\n"], ["\n  border: none;\n  background: none;\n  outline: none;\n  padding: 0 4px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 32px;\n  > svg {\n    height: 24px;\n    fill: ", ";\n  }\n\n  &:hover > svg {\n    fill: ", ";\n  }\n"])), function (p) { return p.theme.dialog.headerTextColor; }, function (p) { return polished_1.mix(0.3, p.theme.dialog.headerBgColor, p.theme.dialog.headerTextColor); });
 // Header component
 function HeaderImpl(_a) {
-    var children = _a.children, className = _a.className, hasClose = _a.hasClose;
-    return (React.createElement("header", { className: classnames_1.default(className) },
+    var children = _a.children, className = _a.className, hasClose = _a.hasClose, props = __rest(_a, ["children", "className", "hasClose"]);
+    return (React.createElement("header", __assign({}, props, { className: classnames_1.default(className) }),
         children,
         hasClose && (React.createElement("div", null,
-            React.createElement(CloseContext.Consumer, null, function (onClose) { return React.createElement(CloseButton, null,
-                React.createElement(IcClose_1.default, { onClick: onClose })); })))));
+            React.createElement(CloseContext.Consumer, null, function (onClose) {
+                return React.createElement(CloseButton, { "aria-label": "close" },
+                    React.createElement(IcClose_1.default, { onClick: onClose }));
+            })))));
 }
 var Header = style_1.styled(HeaderImpl)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 5px 5px 0 0;\n  color: ", ";\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  font-weight: bold;\n  min-height: 32px;\n  padding: 0 4px 0 12px;\n"], ["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 5px 5px 0 0;\n  color: ", ";\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  font-weight: bold;\n  min-height: 32px;\n  padding: 0 4px 0 12px;\n"])), function (p) { return p.theme.dialog.headerBgColor; }, function (p) { return p.theme.dialog.headerTextColor; });
 // Body component
@@ -65,13 +76,11 @@ var Dialog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Dialog.prototype.render = function () {
-        var _a = this.props, open = _a.open, onOpen = _a.onOpen, onClose = _a.onClose, onExited = _a.onExited, _b = _a.keyboard, keyboard = _b === void 0 ? true : _b, className = _a.className, style = _a.style, frameClassName = _a.frameClassName, children = _a.children;
-        return (React.createElement(react_overlays_1.Modal, { show: open, backdrop: true, transition: DialogTransition, backdropTransition: DialogTransition, onShow: onOpen, onHide: onClose, onExited: onExited, onEscapeKeyDown: onClose, keyboard: keyboard, renderBackdrop: function () { return React.createElement(Backdrop, null); } },
+        var _a = this.props, open = _a.open, onOpen = _a.onOpen, onClose = _a.onClose, _b = _a.keyboard, keyboard = _b === void 0 ? true : _b, className = _a.className, style = _a.style, frameClassName = _a.frameClassName, children = _a.children, props = __rest(_a, ["open", "onOpen", "onClose", "keyboard", "className", "style", "frameClassName", "children"]);
+        return (React.createElement(react_overlays_1.Modal, __assign({ show: open, backdrop: true, transition: DialogTransition, backdropTransition: DialogTransition, onShow: onOpen, onHide: onClose, keyboard: keyboard, renderBackdrop: function () { return React.createElement(Backdrop, null); } }, props),
             React.createElement(ModalFrameEl, { className: frameClassName },
-                React.createElement("div", { style: { flex: 2 } }),
                 React.createElement(DialogEl, { className: className, style: style },
-                    React.createElement(CloseContext.Provider, { value: onClose }, children)),
-                React.createElement("div", { style: { flex: 3 } }))));
+                    React.createElement(CloseContext.Provider, { value: onClose }, children)))));
     };
     Dialog.Header = Header;
     Dialog.Body = Body;

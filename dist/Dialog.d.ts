@@ -1,10 +1,10 @@
 import * as React from 'react';
-interface HeaderProps {
+interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
     children?: React.ReactNode;
     className?: string;
     hasClose?: boolean;
 }
-declare function HeaderImpl({ children, className, hasClose }: HeaderProps): JSX.Element;
+declare function HeaderImpl({ children, className, hasClose, ...props }: HeaderProps): JSX.Element;
 interface Props {
     children?: React.ReactNode;
     className?: string;
@@ -12,6 +12,8 @@ interface Props {
     keyboard?: boolean;
     open?: boolean;
     style?: any;
+    'aria-labelledby'?: string;
+    'aria-describedby'?: string;
     /** Called when the dialog first opens. */
     onOpen?: () => void;
     /** Indicates that the dialog wants to close. */

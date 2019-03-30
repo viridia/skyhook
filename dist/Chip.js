@@ -12,7 +12,7 @@ var classnames_1 = require("classnames");
 function ChipImpl(_a) {
     var children = _a.children, className = _a.className, onClose = _a.onClose, size = _a.size;
     return (React.createElement("span", { className: classnames_1.default('chip', className, size) },
-        onClose && React.createElement("button", { className: "close", onClick: onClose }, "\u2715"),
+        onClose && React.createElement("button", { className: "close", onClick: onClose, "aria-label": "close" }, "\u2715"),
         React.createElement("span", { className: "title" }, children)));
 }
 exports.Chip = style_1.styled(ChipImpl).attrs(function (props) { return ({

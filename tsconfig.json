@@ -10,6 +10,7 @@
     "moduleResolution": "node",
     "rootDirs": ["lib", "stories"],
     "baseUrl": "lib",
+    "types": [],
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
