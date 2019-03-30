@@ -1,6 +1,6 @@
 {
   "name": "skyhook-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Themable UI framework built with styled-components.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
