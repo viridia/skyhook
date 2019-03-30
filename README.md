@@ -1,4 +1,4 @@
-# Skyhook
+# Skyhook-UI
 
 A themeable UI framework created using styled-components.
 

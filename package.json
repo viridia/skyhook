@@ -1,5 +1,5 @@
 {
-  "name": "skyhook",
+  "name": "skyhook-ui",
   "version": "1.0.0",
   "description": "Themable UI framework built with styled-components.",
   "main": "dist/index.js",
