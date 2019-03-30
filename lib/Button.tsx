@@ -3,11 +3,11 @@ import { styled } from './style';
 import { darken, saturate } from 'polished';
 import { SizeVariant, ControlHeight, FontHeight } from './variant';
 
-export type StyleVariant = 'action' | 'primary' | 'default';
+export type ButtonVariant = 'action' | 'primary' | 'default';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: SizeVariant;
-  variant?: StyleVariant;
+  variant?: ButtonVariant;
 }
 
 const ButtonImpl =

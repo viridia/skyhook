@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "Themable UI framework built with styled-components.",
   "main": "./dist/index.js",
-  "types": "./dist/",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc --project ./tsconfig.dist.json",
     "build-storybook": "build-storybook -c .storybook -o docs/storybook",

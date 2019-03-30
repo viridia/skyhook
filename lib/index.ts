@@ -1,8 +1,8 @@
 export { AutoNavigate } from './AutoNavigate';
-export { Button } from './Button';
+export { Button, ButtonProps } from './Button';
 export { ButtonGroup } from './ButtonGroup';
 export { CheckBox } from './CheckBox';
-export { Chip } from './Chip';
+export { Chip, ChipProps } from './Chip';
 export { Dialog } from './Dialog';
 export { DiscloseButton } from './DiscloseButton';
 export { DismissButton } from './DismissButton';
@@ -19,4 +19,5 @@ export { TextArea } from './TextArea';
 export { TextInput } from './TextInput';
 export { ToggleSwitch } from './ToggleSwitch';
 export { ValidationMsg } from './ValidationMsg';
+export { SizeVariant } from './variant';
 export { styled, css, createGlobalStyle, keyframes, ThemeProvider, Theme } from './style';

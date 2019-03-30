@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { StyleVariant } from './Button';
+import { ButtonVariant } from './Button';
 import { SizeVariant } from 'variant';
 export interface DropdownButtonProps {
     alignEnd?: boolean;
     disabled?: boolean;
     drop?: 'up' | 'left' | 'right' | 'down';
-    kind?: StyleVariant;
+    kind?: ButtonVariant;
     size?: SizeVariant;
     id?: string;
     className?: string;

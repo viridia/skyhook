@@ -5,7 +5,7 @@ import { contrastingColor } from './theme/contrastingColor';
 import classNames from 'classnames';
 import { SizeVariant } from 'variant';
 
-interface Props {
+export interface ChipProps {
   children: React.ReactNode;
   className?: string;
   color?: string;
@@ -13,7 +13,7 @@ interface Props {
   onClose?: () => void;
 }
 
-function ChipImpl({ children, className, onClose, size }: Props) {
+function ChipImpl({ children, className, onClose, size }: ChipProps) {
   return (
     <span className={classNames('chip', className, size)}>
       {onClose && <button className="close" onClick={onClose} aria-label="close">&#x2715;</button>}
