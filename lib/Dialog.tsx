@@ -9,7 +9,7 @@ import IconClose from './icons-compiled/IcClose';
 type CloseHandler = () => any;
 const CloseContext = React.createContext<CloseHandler>(null);
 
-interface HeaderProps {
+interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
   children?: React.ReactNode;
   className?: string;
   hasClose?: boolean;
@@ -38,14 +38,15 @@ const CloseButton = styled.button`
 `;
 
 // Header component
-function HeaderImpl({ children, className, hasClose }: HeaderProps) {
+function HeaderImpl({ children, className, hasClose, ...props }: HeaderProps) {
   return (
-    <header className={classNames(className)}>
+    <header {...props} className={classNames(className)}>
       {children}
       {hasClose && (
         <div>
           <CloseContext.Consumer>
-            {onClose => <CloseButton><IconClose onClick={onClose} /></CloseButton>}
+            {onClose =>
+                <CloseButton aria-label="close"><IconClose onClick={onClose} /></CloseButton>}
           </CloseContext.Consumer>
         </div>
       )}
@@ -148,6 +149,8 @@ interface Props {
   keyboard?: boolean;
   open?: boolean;
   style?: any;
+  'aria-labelledby'?: string;
+  'aria-describedby'?: string;
 
   /** Called when the dialog first opens. */
   onOpen?: () => void;
@@ -170,12 +173,12 @@ export class Dialog extends React.Component<Props> {
       open,
       onOpen,
       onClose,
-      onExited,
       keyboard = true,
       className,
       style,
       frameClassName,
       children,
+      ...props
     } = this.props;
 
     return (
@@ -186,19 +189,16 @@ export class Dialog extends React.Component<Props> {
         backdropTransition={DialogTransition}
         onShow={onOpen}
         onHide={onClose}
-        onExited={onExited}
-        onEscapeKeyDown={onClose}
         keyboard={keyboard}
         renderBackdrop={() => <Backdrop />}
+        {...props}
       >
         <ModalFrameEl className={frameClassName}>
-          <div style={{ flex: 2 }} />
           <DialogEl className={className} style={style}>
             <CloseContext.Provider value={onClose}>
               {children}
             </CloseContext.Provider>
           </DialogEl>
-          <div style={{ flex: 3 }} />
         </ModalFrameEl>
       </Modal>
     );

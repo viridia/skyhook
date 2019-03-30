@@ -51,9 +51,9 @@ export const makeLight = (color: string, accent: string): Theme => {
     },
 
     menu: {
-      bgColor: c8,
+      bgColor: c9,
       textColor: textColor,
-      borderColor: c5,
+      borderColor: desaturate(0.4, c5),
       focusBgColor: c6,
       focusTextColor: textColor,
       hoverBgColor: c5,

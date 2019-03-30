@@ -16,7 +16,7 @@ interface Props {
 function ChipImpl({ children, className, onClose, size }: Props) {
   return (
     <span className={classNames('chip', className, size)}>
-      {onClose && <button className="close" onClick={onClose}>&#x2715;</button>}
+      {onClose && <button className="close" onClick={onClose} aria-label="close">&#x2715;</button>}
       <span className="title">{children}</span>
     </span>
   );
