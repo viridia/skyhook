@@ -23,9 +23,9 @@ interface Props {
 }
 /** Modal dialog class */
 export declare class Dialog extends React.Component<Props> {
-    static Header: import("styled-components").StyledComponent<typeof HeaderImpl, import("./theme/Theme").Theme, {}, never>;
-    static Body: import("styled-components").StyledComponent<"section", import("./theme/Theme").Theme, {}, never>;
-    static Footer: import("styled-components").StyledComponent<"footer", import("./theme/Theme").Theme, {}, never>;
+    static Header: import("styled-components").StyledComponent<typeof HeaderImpl, import("./style").Theme, {}, never>;
+    static Body: import("styled-components").StyledComponent<"section", import("./style").Theme, {}, never>;
+    static Footer: import("styled-components").StyledComponent<"footer", import("./style").Theme, {}, never>;
     render(): JSX.Element;
 }
 export {};

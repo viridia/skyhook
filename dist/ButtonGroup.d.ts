@@ -5,5 +5,5 @@ export interface ButtonGroupProps {
     vertical?: boolean;
 }
 declare function ButtonGroupImpl({ children, className, vertical, ...attrs }: ButtonGroupProps): JSX.Element;
-export declare const ButtonGroup: import("styled-components").StyledComponent<typeof ButtonGroupImpl, import("./theme/Theme").Theme, {}, never>;
+export declare const ButtonGroup: import("styled-components").StyledComponent<typeof ButtonGroupImpl, import("./style").Theme, {}, never>;
 export {};

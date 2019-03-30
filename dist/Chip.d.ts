@@ -8,7 +8,7 @@ interface Props {
     onClose?: () => void;
 }
 declare function ChipImpl({ children, className, onClose, size }: Props): JSX.Element;
-export declare const Chip: import("styled-components").StyledComponent<typeof ChipImpl, import("./theme/Theme").Theme, {
+export declare const Chip: import("styled-components").StyledComponent<typeof ChipImpl, import("./style").Theme, {
     titleColor: string;
     hoverColor: string;
 }, "titleColor" | "hoverColor">;

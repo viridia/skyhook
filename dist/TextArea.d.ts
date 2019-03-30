@@ -6,5 +6,5 @@ interface Props {
     validationStatus?: ValidationState;
 }
 /** Textarea input form control. */
-export declare const TextArea: import("styled-components").StyledComponent<({ children, className, containerClassName, validationStatus, validationMsg, ...attrs }: Props & React.TextareaHTMLAttributes<HTMLTextAreaElement>) => JSX.Element, import("./theme/Theme").Theme, {}, never>;
+export declare const TextArea: import("styled-components").StyledComponent<({ children, className, containerClassName, validationStatus, validationMsg, ...attrs }: Props & React.TextareaHTMLAttributes<HTMLTextAreaElement>) => JSX.Element, import("./style").Theme, {}, never>;
 export {};

@@ -9,4 +9,4 @@ const {
   ThemeProvider,
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<Theme>;
 
-export { styled, css, createGlobalStyle, keyframes, ThemeProvider };
+export { styled, css, createGlobalStyle, keyframes, ThemeProvider, Theme };
