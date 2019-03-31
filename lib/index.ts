@@ -1,5 +1,5 @@
 export { AutoNavigate } from './AutoNavigate';
-export { Button, ButtonProps } from './Button';
+export { Button, ButtonProps, ButtonVariant } from './Button';
 export { ButtonGroup } from './ButtonGroup';
 export { CheckBox } from './CheckBox';
 export { Chip, ChipProps } from './Chip';
