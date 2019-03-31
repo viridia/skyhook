@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CheckBox, RadioButton, ToggleSwitch, RadioButtonGroup } from '../lib';
+import { CheckBox, RadioButton, ToggleSwitch, RadioButtonGroup, InsetToggleSwitch } from '../lib';
 import { storiesOf } from '@storybook/react';
 import { ThemeCard } from './ThemeCard';
 
@@ -11,6 +11,18 @@ function ToggleDemo() {
       <ToggleSwitch checked={checked} onClick={() => setChecked(!checked)} />
       <header>Disabled</header>
       <ToggleSwitch disabled={true} />
+    </div>
+  )
+}
+
+function InsetToggleDemo() {
+  const [checked, setChecked] = React.useState(false);
+  return (
+    <div>
+      <header>Normal</header>
+      <InsetToggleSwitch checked={checked} onClick={() => setChecked(!checked)} />
+      <header>Disabled</header>
+      <InsetToggleSwitch disabled={true} />
     </div>
   )
 }
@@ -65,6 +77,13 @@ storiesOf('Components/Input', module).add(
   () => (
     <ThemeCard>
       {() => <ToggleDemo />}
+    </ThemeCard>
+  ),
+).add(
+  'InsetToggleSwitch',
+  () => (
+    <ThemeCard>
+      {() => <InsetToggleDemo />}
     </ThemeCard>
   ),
 );

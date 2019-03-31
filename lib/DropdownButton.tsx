@@ -14,7 +14,7 @@ export interface DropdownButtonProps {
   alignEnd?: boolean;
   disabled?: boolean;
   drop?: 'up' | 'left' | 'right' | 'down';
-  kind?: ButtonVariant;
+  variant?: ButtonVariant;
   size?: SizeVariant;
   id?: string;
   className?: string;
@@ -38,7 +38,7 @@ export function DropdownButton({
   className,
   children,
   title,
-  kind,
+  variant,
   onSelect,
 }: DropdownButtonProps) {
   const [shown, setShown] = React.useState(false);
@@ -75,7 +75,7 @@ export function DropdownButton({
           <OverlayDropdown.Toggle>
             {({ toggle, props: buttonProps }) => (
               <DropdownButtonEl
-                  variant={kind}
+                  variant={variant}
                   size={size}
                   disabled={disabled}
                   className={className}

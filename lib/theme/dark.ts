@@ -76,5 +76,12 @@ export const makeDark = (color: string, accent: string): Theme => {
       checkedSlideColor: c0,
       checkedThumbColor: c8,
     },
+
+    insetToggle: {
+      slideColor: '#000',
+      thumbColor: desaturate(0.2, c2),
+      checkedSlideColor: '#000',
+      checkedThumbColor: lighten(0.1, accent),
+    },
   }
 };

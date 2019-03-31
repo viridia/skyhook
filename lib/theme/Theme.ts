@@ -70,4 +70,5 @@ export interface Theme {
   progress: ProgressTheme;
   textField: TextField;
   toggle: ToggleSwitchColors;
+  insetToggle: ToggleSwitchColors;
 }

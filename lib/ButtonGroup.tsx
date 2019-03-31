@@ -30,10 +30,10 @@ export const ButtonGroup = styled(ButtonGroupImpl)`
     border-radius: 0;
     margin-right: -1px;
     &:first-child {
-      border-radius: 4px 0 0 4px;
+      border-radius: ${p => p.theme.button.roundCorners ? '4px 0 0 4px' : 0};
     }
     &:last-child {
-      border-radius: 0 4px 4px 0;
+      border-radius: ${p => p.theme.button.roundCorners ? '0 4px 4px 0' : 0};
       margin-right: 0;
     }
   }

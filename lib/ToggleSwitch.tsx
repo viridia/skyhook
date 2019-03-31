@@ -61,7 +61,6 @@ export const ToggleSwitch = styled(ToggleSwitchImpl)`
     position: absolute;
     transition: transform linear 0.2s, background-color linear 0.3s;
     width: 19px;
-    /* transition: transform */
   }
 
   &.checked {
@@ -71,6 +70,55 @@ export const ToggleSwitch = styled(ToggleSwitchImpl)`
     > .thumb {
       transform: translateX(17px);
       background-color: ${p => p.theme.toggle.checkedThumbColor};
+    }
+  }
+`;
+
+export const InsetToggleSwitch = styled(ToggleSwitchImpl)`
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  position: relative;
+
+  &[disabled] {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  > .slide {
+    background-color: ${p => p.theme.insetToggle.slideColor};
+    border-radius: 11px;
+    box-shadow: inset 0 1px 1px 1px ${p => p.theme.shadowColor};
+    height: 22px;
+    transition: background-color linear 0.2s;
+    width: 38px;
+  }
+
+  &:focus > .slide {
+    box-shadow: 0 0 0 3px ${p => p.theme.focusColor};
+    z-index: 1;
+  }
+
+  > .thumb {
+    background-color: ${p => p.theme.insetToggle.thumbColor};
+    border-radius: 9px;
+    height: 18px;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    transition: transform linear 0.2s, background-color linear 0.3s;
+    width: 19px;
+  }
+
+  &.checked {
+    > .slide {
+      background-color: ${p => p.theme.insetToggle.checkedSlideColor};
+    }
+    > .thumb {
+      transform: translateX(15px);
+      background-color: ${p => p.theme.insetToggle.checkedThumbColor};
     }
   }
 `;

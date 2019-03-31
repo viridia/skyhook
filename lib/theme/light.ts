@@ -81,5 +81,12 @@ export const makeLight = (color: string, accent: string): Theme => {
       checkedSlideColor: c2,
       checkedThumbColor: mix(0.7, accent, '#fff'),
     },
+
+    insetToggle: {
+      slideColor: desaturate(0.3, color),
+      thumbColor: c9,
+      checkedSlideColor: c2,
+      checkedThumbColor: mix(0.3, accent, '#fff'),
+    },
   }
 };

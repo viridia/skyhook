@@ -17,7 +17,7 @@ export { RadioButtonGroup, RadioButtonGroupProps } from './RadioButtonGroup';
 export { Spacer } from './Spacer';
 export { TextArea, TextAreaProps } from './TextArea';
 export { TextInput, TextInputProps } from './TextInput';
-export { ToggleSwitch, ToggleSwitchProps } from './ToggleSwitch';
+export { ToggleSwitch, ToggleSwitchProps, InsetToggleSwitch } from './ToggleSwitch';
 export { ValidationMsg, ValidationState } from './ValidationMsg';
 export { SizeVariant } from './variant';
 export { styled, css, createGlobalStyle, keyframes, ThemeProvider, Theme } from './style';
