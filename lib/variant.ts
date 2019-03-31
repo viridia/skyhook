@@ -1,4 +1,4 @@
-export type SizeVariant = 'normal' | 'small' | 'smaller' | 'mini';
+export declare type SizeVariant = 'normal' | 'small' | 'smaller' | 'mini';
 
 export const ControlHeight = {
   'normal': '34px',

@@ -2,13 +2,13 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { styled } from './style';
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RadioButtonProps extends React.InputHTMLAttributes<HTMLInputElement> {
   value?: string;
   selected?: boolean;
 }
 
 const RadioButtonImpl = React.forwardRef(
-    ({ id, children, className, checked, selected, ...props }: Props, ref: any) => {
+    ({ id, children, className, checked, selected, ...props }: RadioButtonProps, ref: any) => {
   const disabled = props.disabled;
   return (
     <label

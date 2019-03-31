@@ -142,7 +142,7 @@ const DialogEl = styled.div`
   }
 `;
 
-interface Props {
+export interface DialogProps {
   children?: React.ReactNode;
   className?: string;
   frameClassName?: string;
@@ -163,7 +163,7 @@ interface Props {
 }
 
 /** Modal dialog class */
-export class Dialog extends React.Component<Props> {
+export class Dialog extends React.Component<DialogProps> {
   public static Header = Header;
   public static Body = Body;
   public static Footer = Footer;

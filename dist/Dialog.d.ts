@@ -5,7 +5,7 @@ interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
     hasClose?: boolean;
 }
 declare function HeaderImpl({ children, className, hasClose, ...props }: HeaderProps): JSX.Element;
-interface Props {
+export interface DialogProps {
     children?: React.ReactNode;
     className?: string;
     frameClassName?: string;
@@ -22,7 +22,7 @@ interface Props {
     onExited?: () => void;
 }
 /** Modal dialog class */
-export declare class Dialog extends React.Component<Props> {
+export declare class Dialog extends React.Component<DialogProps> {
     static Header: import("styled-components").StyledComponent<typeof HeaderImpl, import("./style").Theme, {}, never>;
     static Body: import("styled-components").StyledComponent<"section", import("./style").Theme, {}, never>;
     static Footer: import("styled-components").StyledComponent<"footer", import("./style").Theme, {}, never>;

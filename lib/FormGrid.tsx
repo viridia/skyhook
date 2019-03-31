@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { css, styled } from './style';
 
-export type FormLayoutStyle = 'stacked' | 'inline' | 'ledger' | 'row' | 'column';
+export declare type FormLayoutStyle = 'stacked' | 'inline' | 'ledger' | 'row' | 'column';
 
 export interface FormGridProps {
   layout?: FormLayoutStyle;

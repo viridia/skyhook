@@ -47,7 +47,7 @@ const ProgressContent = styled.div`
   z-index: 1;
 `;
 
-interface Props {
+export interface ProgressBarProps {
   children?: React.ReactNode;
   className?: string;
   value: number;
@@ -56,7 +56,8 @@ interface Props {
   size?: SizeVariant;
 }
 
-export function ProgressBar({ value, min = 0, max = 100, className, size, children }: Props) {
+export function ProgressBar(
+    { value, min = 0, max = 100, className, size, children }: ProgressBarProps) {
   const percent = Math.min(100, Math.max(0, (value - min) * 100.0 / Math.max(max - min, 1)));
   return (
     <ProgressTrack className={classNames(className, size)}>

@@ -18,4 +18,4 @@ export const ValidationMsg = styled.div`
   }
 `;
 
-export type ValidationState = 'error' | 'warning' | 'success';
+export declare type ValidationState = 'error' | 'warning' | 'success';

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { styled } from './style';
 import { FormGridProps, FormLayoutCSS } from './FormGrid';
 
-export type FormProps = React.FormHTMLAttributes<HTMLFormElement> & FormGridProps;
+export declare type FormProps = React.FormHTMLAttributes<HTMLFormElement> & FormGridProps;
 
 function FormImpl({ children, className, layout = 'ledger', ...attrs }: FormProps) {
   return (

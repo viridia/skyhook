@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled } from './style';
 
-interface Props {
+export interface RadioButtonGroupProps {
   id: string;
   children: React.ReactNode;
   className?: string;
@@ -9,7 +9,7 @@ interface Props {
   onChange?: (value: string) => void;
 }
 
-function RadioButtonGroupImpl({ id, className, children, value, onChange }: Props) {
+function RadioButtonGroupImpl({ id, className, children, value, onChange }: RadioButtonGroupProps) {
   // Get the list of radio values
   const values = React.Children.map(children, (radioItem: React.ReactElement) => {
     if (radioItem.props && radioItem.props.value) {

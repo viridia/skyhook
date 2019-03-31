@@ -1,6 +1,5 @@
-interface Props {
+export interface DiscloseButtonProps {
     onClick: (state: any) => void;
     checked?: boolean;
 }
-export declare function DiscloseButton(props: Props): JSX.Element;
-export {};
+export declare function DiscloseButton(props: DiscloseButtonProps): JSX.Element;

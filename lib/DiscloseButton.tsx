@@ -28,12 +28,12 @@ const DiscloseButtonEl = styled.button`
   }
 `;
 
-interface Props {
+export interface DiscloseButtonProps {
   onClick: (state: any) => void;
   checked?: boolean;
 }
 
-export function DiscloseButton(props: Props) {
+export function DiscloseButton(props: DiscloseButtonProps) {
   return (
     <DiscloseButtonEl
         className={classNames('disclose', { checked: props.checked })}

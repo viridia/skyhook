@@ -2,11 +2,11 @@ import * as React from 'react';
 import { styled } from './style';
 import classNames from 'classnames';
 
-interface Props extends React.InputHTMLAttributes<HTMLDivElement> {
+export interface MenuProps extends React.InputHTMLAttributes<HTMLDivElement> {
   checkable?: boolean;
 }
 
-const MenuImpl = React.forwardRef(({ children, className, checkable, ...props }: Props, ref: any) => {
+const MenuImpl = React.forwardRef(({ children, className, checkable, ...props }: MenuProps, ref: any) => {
   return (
     <div {...props} ref={ref} role="menu" className={classNames(className, { checkable })}>
       {children}

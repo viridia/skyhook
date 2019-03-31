@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { ValidationState } from './ValidationMsg';
-interface Props {
+export interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
     containerClassName?: string;
     validationMsg?: string;
     validationStatus?: ValidationState;
 }
 /** Textarea input form control. */
-export declare const TextArea: import("styled-components").StyledComponent<({ children, className, containerClassName, validationStatus, validationMsg, ...attrs }: Props & React.TextareaHTMLAttributes<HTMLTextAreaElement>) => JSX.Element, import("./style").Theme, {}, never>;
-export {};
+export declare const TextArea: import("styled-components").StyledComponent<({ children, className, containerClassName, validationStatus, validationMsg, ...attrs }: TextAreaProps) => JSX.Element, import("./style").Theme, {}, never>;

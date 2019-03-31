@@ -12,7 +12,7 @@ const InputEl = styled.textarea`
   min-height: 18px;
 `;
 
-interface Props {
+export interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   containerClassName?: string;
   validationMsg?: string;
   validationStatus?: ValidationState;
@@ -25,8 +25,7 @@ const TextAreaImpl = ({
     validationStatus,
     validationMsg,
     ...attrs
-  }: Props
-    & React.TextareaHTMLAttributes<HTMLTextAreaElement>) => {
+  }: TextAreaProps) => {
   return (
     <TextInputContainer className={classNames('form-control', containerClassName)}>
       <InputEl className={classNames(className, validationStatus)} {...attrs}>

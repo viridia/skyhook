@@ -2,14 +2,14 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { styled } from './style';
 
-interface Props {
+export interface ToggleSwitchProps {
   checked?: boolean;
   className?: string;
   disabled?: boolean;
   onClick?: () => void;
 }
 
-function ToggleSwitchImpl({ checked, disabled, className, ...props }: Props) {
+function ToggleSwitchImpl({ checked, disabled, className, ...props }: ToggleSwitchProps) {
   return (
     <button
       {...props}

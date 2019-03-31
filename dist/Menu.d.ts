@@ -1,9 +1,9 @@
 import * as React from 'react';
-interface Props extends React.InputHTMLAttributes<HTMLDivElement> {
+export interface MenuProps extends React.InputHTMLAttributes<HTMLDivElement> {
     checkable?: boolean;
 }
 /** Drop-down menu class. */
-export declare const Menu: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<Props & React.RefAttributes<{}>>, import("./style").Theme, {}, never>;
+export declare const Menu: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<MenuProps & React.RefAttributes<{}>>, import("./style").Theme, {}, never>;
 export interface MenuItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     active?: boolean;
     eventKey?: string;
@@ -16,4 +16,3 @@ export declare const MenuItem: import("styled-components").StyledComponent<typeo
 }, "tabIndex">;
 /** Menu divider. */
 export declare const MenuDivider: import("styled-components").StyledComponent<"div", import("./style").Theme, {}, never>;
-export {};

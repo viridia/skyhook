@@ -12,7 +12,7 @@ const InputEl = styled.input`
   min-height: 18px;
 `;
 
-interface InputProps {
+export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   containerClassName?: string;
   validationMsg?: string;
   validationStatus?: ValidationState;
@@ -26,7 +26,7 @@ const TextInputImpl = React.forwardRef(
     validationStatus,
     validationMsg,
     ...attrs
-  }: InputProps & React.InputHTMLAttributes<HTMLInputElement>,
+  }: TextInputProps,
   ref: any) => (
   <TextInputContainer className={classNames('form-control', containerClassName)}>
     <div className={classNames('text-input-content', validationStatus)}>
