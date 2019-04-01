@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, ButtonGroup, DiscloseButton, DismissButton } from '../lib';
+import { Button, ButtonGroup, DiscloseButton, DismissButton, ActionLink } from '../lib';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { styled } from '../lib/style';
@@ -88,6 +88,17 @@ storiesOf('Components/Button', module)
     () => (
       <ThemeCard>
         {() => <DismissButton />}
+      </ThemeCard>
+    ),
+  ).add(
+    'ActionLink',
+    () => (
+      <ThemeCard>
+        {() => (
+          <DemoLayout>
+            <ActionLink onClick={action('button-click')}>Take Action</ActionLink>
+          </DemoLayout>
+        )}
       </ThemeCard>
     ),
   );

@@ -1,7 +1,8 @@
+export { ActionLink, ActionLinkProps } from './ActionLink';
 export { AutoNavigate } from './AutoNavigate';
 export { Button, ButtonProps, ButtonVariant } from './Button';
 export { ButtonGroup } from './ButtonGroup';
-export { CheckBox } from './CheckBox';
+export { CheckBox, CheckBoxProps } from './CheckBox';
 export { Chip, ChipProps } from './Chip';
 export { Dialog, DialogProps } from './Dialog';
 export { DiscloseButton, DiscloseButtonProps } from './DiscloseButton';

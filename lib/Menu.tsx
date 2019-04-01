@@ -16,8 +16,8 @@ const MenuImpl = React.forwardRef(({ children, className, checkable, ...props }:
 
 /** Drop-down menu class. */
 export const Menu = styled(MenuImpl)`
-  background-color: ${props => props.theme.menu.bgColor};
-  border: 1px solid ${props => props.theme.menu.borderColor};
+  background-color: ${p => p.theme.menu.bgColor};
+  border: 1px solid ${p => p.theme.menu.borderColor};
   border-radius: 3px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -64,7 +64,7 @@ export const MenuItem = styled(MenuItemImpl).attrs({
 })`
   background-color: transparent;
   border: none;
-  color: ${props => props.theme.menu.textColor};
+  color: ${p => p.theme.menu.textColor};
   display: flex;
   flex-direction: row;
   margin: 0 4px;
@@ -80,13 +80,13 @@ export const MenuItem = styled(MenuItemImpl).attrs({
   }
 
   &:hover:not([disabled]) {
-    background-color: ${props => props.theme.menu.hoverBgColor};
-    color: ${props => props.theme.menu.hoverTextColor};
+    background-color: ${p => p.theme.menu.hoverBgColor};
+    color: ${p => p.theme.menu.hoverTextColor};
   }
 
   &:focus {
-    background-color: ${props => props.theme.menu.focusBgColor};
-    color: ${props => props.theme.menu.focusTextColor};
+    background-color: ${p => p.theme.menu.focusBgColor};
+    color: ${p => p.theme.menu.focusTextColor};
   }
 
   .checkable > & {
@@ -106,7 +106,7 @@ export const MenuItem = styled(MenuItemImpl).attrs({
 /** Menu divider. */
 export const MenuDivider = styled.div`
   align-self: stretch;
-  border-bottom: 1px solid ${props => props.theme.menu.dividerColor};
+  border-bottom: 1px solid ${p => p.theme.menu.dividerColor};
   display: block;
   margin: 4px 0;
 `;

@@ -6,9 +6,9 @@ import { SizeVariant } from 'variant';
 
 const ProgressTrack = styled.div`
   align-items: center;
-  background-color: ${props => props.theme.progress.trackColor};
+  background-color: ${p => p.theme.progress.trackColor};
   border-radius: 4px;
-  color: ${props => props.theme.progress.textColor};
+  color: ${p => p.theme.progress.textColor};
   justify-content: center;
   display: inline-flex;
   overflow: hidden;
@@ -31,10 +31,10 @@ const ProgressTrack = styled.div`
 const ProgressThumb = styled.div`
   background: repeating-linear-gradient(
     -45deg,
-    ${props => props.theme.progress.thumbColor},
-    ${props => props.theme.progress.thumbColor} 10px,
-    ${props => darken(.03, props.theme.progress.thumbColor)} 10px,
-    ${props => darken(.03, props.theme.progress.thumbColor)} 20px
+    ${p => p.theme.progress.thumbColor},
+    ${p => p.theme.progress.thumbColor} 10px,
+    ${p => darken(.03, p.theme.progress.thumbColor)} 10px,
+    ${p => darken(.03, p.theme.progress.thumbColor)} 20px
   );
   background-attachment: fixed;
   position: absolute;

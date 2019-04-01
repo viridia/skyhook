@@ -23,7 +23,7 @@ var Menu_1 = require("./Menu");
 var DropdownContainer = style_1.styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: relative;\n  display: inline-block;\n"], ["\n  position: relative;\n  display: inline-block;\n"])));
 var DropdownButtonEl = style_1.styled(Button_1.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  justify-content: space-between;\n  .down-arrow {\n    margin-left: 1rem;\n  }\n"], ["\n  justify-content: space-between;\n  .down-arrow {\n    margin-left: 1rem;\n  }\n"])));
 function DropdownButton(_a) {
-    var _b = _a.drop, drop = _b === void 0 ? 'down' : _b, disabled = _a.disabled, size = _a.size, _c = _a.alignEnd, alignEnd = _c === void 0 ? false : _c, className = _a.className, children = _a.children, title = _a.title, kind = _a.kind, onSelect = _a.onSelect;
+    var _b = _a.drop, drop = _b === void 0 ? 'down' : _b, disabled = _a.disabled, size = _a.size, _c = _a.alignEnd, alignEnd = _c === void 0 ? false : _c, className = _a.className, children = _a.children, title = _a.title, variant = _a.variant, onSelect = _a.onSelect;
     var _d = React.useState(false), shown = _d[0], setShown = _d[1];
     function onMenuClick(e) {
         setShown(false);
@@ -48,7 +48,7 @@ function DropdownButton(_a) {
         return (React.createElement(DropdownContainer, __assign({}, props),
             React.createElement(react_overlays_1.Dropdown.Toggle, null, function (_a) {
                 var toggle = _a.toggle, buttonProps = _a.props;
-                return (React.createElement(DropdownButtonEl, __assign({ variant: kind, size: size, disabled: disabled, className: className }, buttonProps, { onClick: function (e) { e.preventDefault(); toggle(e); } }),
+                return (React.createElement(DropdownButtonEl, __assign({ variant: variant, size: size, disabled: disabled, className: className }, buttonProps, { onClick: function (e) { e.preventDefault(); toggle(e); } }),
                     React.createElement("span", { className: "title" }, title),
                     React.createElement("span", { className: "down-arrow" }, "\u25BE")));
             }),

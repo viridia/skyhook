@@ -18,6 +18,7 @@ exports.makeLight = function (color, accent) {
         focusColor: c5,
         shadowColor: shadow,
         textNormal: textColor,
+        linkColor: polished_1.darken(0.2, accent),
         button: {
             default: {
                 bgColor: c7,
@@ -33,6 +34,11 @@ exports.makeLight = function (color, accent) {
                 bgColor: accent,
                 textColor: c8,
                 borderColor: polished_1.darken(0.1, accent),
+            },
+            checkbox: {
+                bgColor: c7,
+                textColor: c1,
+                borderColor: c4,
             },
             radio: {
                 bgColor: c7,
@@ -73,6 +79,12 @@ exports.makeLight = function (color, accent) {
             thumbColor: c9,
             checkedSlideColor: c2,
             checkedThumbColor: polished_1.mix(0.7, accent, '#fff'),
+        },
+        insetToggle: {
+            slideColor: polished_1.desaturate(0.3, color),
+            thumbColor: c9,
+            checkedSlideColor: c2,
+            checkedThumbColor: polished_1.mix(0.3, accent, '#fff'),
         },
     };
 };

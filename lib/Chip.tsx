@@ -22,15 +22,15 @@ function ChipImpl({ children, className, onClose, size }: ChipProps) {
   );
 }
 
-export const Chip = styled(ChipImpl).attrs(props => ({
-  titleColor: contrastingColor(props.color),
-  hoverColor: transparentize(0.4, contrastingColor(props.color)),
+export const Chip = styled(ChipImpl).attrs(p => ({
+  titleColor: contrastingColor(p.color),
+  hoverColor: transparentize(0.4, contrastingColor(p.color)),
 }))`
   display: inline-flex;
   align-items: center;
-  background-color: ${props => props.color};
+  background-color: ${p => p.color};
   border-radius: 12px;
-  color: ${props => props.titleColor};
+  color: ${p => p.titleColor};
   font-size: 85%;
   flex-direction: row;
   height: 24px;
@@ -66,7 +66,7 @@ export const Chip = styled(ChipImpl).attrs(props => ({
   > .close {
     align-items: center;
     border: none;
-    color: ${props => props.hoverColor};
+    color: ${p => p.hoverColor};
     cursor: pointer;
     background-color: transparent;
     display: flex;
@@ -81,7 +81,7 @@ export const Chip = styled(ChipImpl).attrs(props => ({
     font-weight: bold;
 
     &:hover {
-      color: ${props => props.titleColor};
+      color: ${p => p.titleColor};
     }
   }
 `;

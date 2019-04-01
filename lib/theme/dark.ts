@@ -9,6 +9,7 @@ export const makeDark = (color: string, accent: string): Theme => {
   const c1 = lighten(0.1, color);
   const c2 = lighten(0.15, color);
   const c3 = lighten(0.2, color);
+  const c4 = lighten(0.3, color);
   // const c5 = lighten(0.4, color);
   const c8 = mix(0.2, color, '#fff');
   const c9 = mix(0.1, color, '#fff');
@@ -17,6 +18,7 @@ export const makeDark = (color: string, accent: string): Theme => {
     focusColor: c1,
     textNormal: textColor,
     shadowColor: shadow,
+    linkColor: lighten(0.3, accent),
 
     button: {
       default: {
@@ -31,6 +33,11 @@ export const makeDark = (color: string, accent: string): Theme => {
       action: {
         bgColor: accent,
         textColor: c9,
+      },
+      checkbox: {
+        bgColor: c0,
+        textColor: c8,
+        borderColor: c3,
       },
       radio: {
         bgColor: c0,
@@ -79,7 +86,7 @@ export const makeDark = (color: string, accent: string): Theme => {
 
     insetToggle: {
       slideColor: '#000',
-      thumbColor: desaturate(0.2, c2),
+      thumbColor: desaturate(0.2, c4),
       checkedSlideColor: '#000',
       checkedThumbColor: lighten(0.1, accent),
     },

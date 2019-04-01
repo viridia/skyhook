@@ -41,15 +41,15 @@ const TextAreaImpl = ({
 
 /** Textarea input form control. */
 export const TextArea = styled(TextAreaImpl)`
-  background-color: ${props => props.theme.textField.bgColor};
-  border: 1px solid ${props => props.theme.textField.borderColor};
+  background-color: ${p => p.theme.textField.bgColor};
+  border: 1px solid ${p => p.theme.textField.borderColor};
   border-radius: 3px;
   outline: none;
   padding: 6px;
   resize: none;
 
   &:focus {
-    box-shadow: 0 0 0 3px ${props => props.theme.focusColor};
+    box-shadow: 0 0 0 3px ${p => p.theme.focusColor};
     z-index: 1;
   }
 

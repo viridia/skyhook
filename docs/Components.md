@@ -10,13 +10,13 @@ the ```<Button>``` component defines the following optional properties:
 | variant | Style variant | One of ```default```, ```primary```, or ```action``` |
 | size | Button size | One of ```normal```, ```small```, ```smaller``` or ```mini``` |
 
-* The 'default' variant renders a plain button that does not call attention to itself. This would
-typically be used for the 'cancel' button of a dialog, as an example.
-* The 'primary' variant represents a button that stands out, such as the 'submit' or 'OK' button of
-a dialog.
-* The 'action' variant represents a 'call to action' button, that is, the one button on the page
-that should attract the user's attention first. This would be often used to create a new object,
-such as "new contact' or 'new document'.
+* The ```default``` variant renders a plain button that does not call attention to itself. This
+  would typically be used for the 'cancel' button of a dialog, as an example.
+* The ```primary``` variant represents a button that stands out, such as the 'submit' or 'OK' button
+  of a dialog.
+* The ```action``` variant represents a 'call to action' button, that is, the one button on the page
+  that should attract the user's attention first. This would be often used to create a new object,
+  such as "new contact' or 'new document'.
 
 ```js
 <Button kind="primary" onClick={() => console.log('clicked')}>

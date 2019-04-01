@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var ActionLink_1 = require("./ActionLink");
+exports.ActionLink = ActionLink_1.ActionLink;
 var AutoNavigate_1 = require("./AutoNavigate");
 exports.AutoNavigate = AutoNavigate_1.AutoNavigate;
 var Button_1 = require("./Button");
@@ -43,6 +45,7 @@ var TextInput_1 = require("./TextInput");
 exports.TextInput = TextInput_1.TextInput;
 var ToggleSwitch_1 = require("./ToggleSwitch");
 exports.ToggleSwitch = ToggleSwitch_1.ToggleSwitch;
+exports.InsetToggleSwitch = ToggleSwitch_1.InsetToggleSwitch;
 var ValidationMsg_1 = require("./ValidationMsg");
 exports.ValidationMsg = ValidationMsg_1.ValidationMsg;
 var style_1 = require("./style");

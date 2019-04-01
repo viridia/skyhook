@@ -10,6 +10,7 @@ export interface ButtonTheme {
   default: ButtonColors;
   action: ButtonColors;
   primary: ButtonColors;
+  checkbox: ButtonColors;
   radio: ButtonColors;
   roundCorners?: boolean;
 }
@@ -63,6 +64,7 @@ export interface Theme {
   focusColor: string;
   shadowColor: string;
   textNormal: string;
+  linkColor: string;
 
   button: ButtonTheme;
   dialog: DialogTheme;

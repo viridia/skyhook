@@ -38,6 +38,26 @@ function RadioDemo() {
   )
 }
 
+function CheckBoxDemo(
+    { ch, ind, children }: { ch?: boolean, ind?: boolean, children: React.ReactNode}) {
+  const [checked, setChecked] = React.useState<boolean>(!!ch);
+  const ref = React.createRef<HTMLInputElement>();
+  React.useEffect(() => {
+    ref.current.indeterminate = ind;
+  }, []);
+  return (
+    <div>
+      <CheckBox
+        ref={ref}
+        checked={checked}
+        onChange={e => { setChecked(e.target.checked); }}
+      >
+        {children}
+      </CheckBox>
+    </div>
+  )
+}
+
 function RadioGroupDemo() {
   const [value, setValue] = React.useState('b');
   return (
@@ -54,7 +74,17 @@ storiesOf('Components/Input', module).add(
   () => (
     <ThemeCard>
       {() => (
-        <CheckBox>Checkbox</CheckBox>
+        <section>
+          <div>
+            <CheckBoxDemo>False</CheckBoxDemo>
+          </div>
+          <div>
+            <CheckBoxDemo ch={true}>True</CheckBoxDemo>
+          </div>
+          <div>
+            <CheckBoxDemo ind={true}>Maybe</CheckBoxDemo>
+          </div>
+        </section>
       )}
     </ThemeCard>
   ),

@@ -18,6 +18,7 @@ export const makeLight = (color: string, accent: string): Theme => {
     focusColor: c5,
     shadowColor: shadow,
     textNormal: textColor,
+    linkColor: darken(0.2, accent),
 
     button: {
       default: {
@@ -34,6 +35,11 @@ export const makeLight = (color: string, accent: string): Theme => {
         bgColor: accent,
         textColor: c8,
         borderColor: darken(0.1, accent),
+      },
+      checkbox: {
+        bgColor: c7,
+        textColor: c1,
+        borderColor: c4,
       },
       radio: {
         bgColor: c7,

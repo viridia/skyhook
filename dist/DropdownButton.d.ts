@@ -5,7 +5,7 @@ export interface DropdownButtonProps {
     alignEnd?: boolean;
     disabled?: boolean;
     drop?: 'up' | 'left' | 'right' | 'down';
-    kind?: ButtonVariant;
+    variant?: ButtonVariant;
     size?: SizeVariant;
     id?: string;
     className?: string;
@@ -13,4 +13,4 @@ export interface DropdownButtonProps {
     title: React.ReactNode;
     onSelect?: (key: string) => any;
 }
-export declare function DropdownButton({ drop, disabled, size, alignEnd, className, children, title, kind, onSelect, }: DropdownButtonProps): JSX.Element;
+export declare function DropdownButton({ drop, disabled, size, alignEnd, className, children, title, variant, onSelect, }: DropdownButtonProps): JSX.Element;

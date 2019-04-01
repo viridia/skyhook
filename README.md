@@ -35,6 +35,10 @@ A ```<Button>``` component is just an HTML button with some styles associated wi
 handlers should be no different than if you were using the standard HTML widget. (This means
 that you'll need to be responsible for calling ```preventDefault()``` where appropriate.)
 
+## Component Documentation
+
+* [API Docs](https://github.com/viridia/skyhook/blob/master/docs/Components.md)
+
 ## Theming
 
 ### Theme Factories
