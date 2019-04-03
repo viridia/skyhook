@@ -36,13 +36,14 @@ export const CheckBox = styled(CheckBoxImpl)`
   position: relative;
 
   > .checkbox {
-    background-color: ${p => p.theme.button.radio.bgColor};
-    border: 2px solid ${p => p.theme.button.radio.borderColor};
+    background-color: ${p => p.theme.button.checkbox.bgColor};
+    border: 1px solid ${p => p.theme.button.checkbox.borderColor};
     border-radius: 3px;
-    height: 1rem;
+    box-shadow: 0.5px 1px 1px 0 ${p => p.theme.shadowColor};
+    height: .9rem;
     margin-right: 6px;
     position: relative;
-    width: 1rem;
+    width: .9rem;
   }
 
   &:focus-within > .checkbox {
@@ -70,24 +71,24 @@ export const CheckBox = styled(CheckBoxImpl)`
     position: absolute;
     content: '';
     border-width: 0 3px 3px 0;
-    border-color: ${p => p.theme.button.radio.textColor};
+    border-color: ${p => p.theme.button.checkbox.textColor};
     border-style: solid;
-    left: 4px;
+    left: 3px;
     transform: scaleX(0.7) rotate(45deg);
-    top: -3px;
-    width: .4rem;
-    height: .9rem;
+    top: -2px;
+    width: .3rem;
+    height: .7rem;
   }
 
   > input:indeterminate ~ .checkbox::after {
     position: absolute;
     content: '';
     border-width: 0 0 3px 0;
-    border-color: ${p => p.theme.button.radio.borderColor};
+    border-color: ${p => p.theme.button.checkbox.borderColor};
     border-style: solid;
     left: 3px;
-    top: .45rem;
-    width: .6rem;
+    top: .35rem;
+    width: .5rem;
     height: 0;
   }
 `;
