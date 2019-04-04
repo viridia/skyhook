@@ -11,6 +11,7 @@ export { DropdownButton, DropdownButtonProps } from './DropdownButton';
 export { Form, FormProps } from './Form';
 export { FormLabel } from './FormLabel';
 export { FormGrid, FormGridProps, FormControlGroup, FormLayoutStyle } from './FormGrid';
+export { FormMessage, FormMessageProps } from './FormMessage';
 export { Menu, MenuProps, MenuItem, MenuItemProps, MenuDivider } from './Menu';
 export { ProgressBar, ProgressBarProps } from './ProgressBar';
 export { RadioButton, RadioButtonProps } from './RadioButton';

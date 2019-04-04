@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Form, TextInput, FormLabel, Button, FormControlGroup, AutoNavigate } from '../lib';
+import { Form, TextInput, FormLabel, Button, FormControlGroup, AutoNavigate, FormMessage } from '../lib';
 import { storiesOf } from '@storybook/react';
 import { styled } from '../lib/style';
 import { ThemeCard } from './ThemeCard';
@@ -71,6 +71,19 @@ storiesOf('Components/Form', module).add(
         <FormControlGroup>
           <Button>Group 3</Button>
         </FormControlGroup>
+      </Form>
+  )}
+  </ThemeCard>,
+).add(
+  'FormMessage',
+  () => <ThemeCard>
+    {() => (
+      <Form layout="ledger" onSubmit={e => { e.preventDefault(); console.log('submit'); }}>
+        <FormLabel>First Name:</FormLabel>
+        <TextInput defaultValue="James" name="first-name"/>
+        <FormMessage state="success">Success</FormMessage>
+        <FormMessage state="warning">Warning</FormMessage>
+        <FormMessage state="error">Error</FormMessage>
       </Form>
   )}
   </ThemeCard>,
