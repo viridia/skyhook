@@ -86,6 +86,11 @@ exports.makeLight = function (color, accent) {
             checkedSlideColor: c2,
             checkedThumbColor: polished_1.mix(0.3, accent, '#fff'),
         },
+        tooltip: {
+            bgColor: polished_1.lighten(0.02, c8),
+            textColor: textColor,
+            borderColor: polished_1.darken(0.15, c8),
+        },
     };
 };
 //# sourceMappingURL=light.js.map

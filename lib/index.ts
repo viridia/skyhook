@@ -20,6 +20,7 @@ export { Spacer } from './Spacer';
 export { TextArea, TextAreaProps } from './TextArea';
 export { TextInput, TextInputProps } from './TextInput';
 export { ToggleSwitch, ToggleSwitchProps, InsetToggleSwitch } from './ToggleSwitch';
+export { Tooltip, TooltipProps } from './Tooltip';
 export { ValidationMsg, ValidationState } from './ValidationMsg';
 export { SizeVariant } from './variant';
 export { styled, css, createGlobalStyle, keyframes, ThemeProvider, Theme } from './style';

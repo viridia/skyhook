@@ -83,6 +83,11 @@ exports.makeDark = function (color, accent) {
             checkedSlideColor: '#000',
             checkedThumbColor: polished_1.lighten(0.1, accent),
         },
+        tooltip: {
+            bgColor: darker,
+            textColor: c9,
+            borderColor: '#000',
+        },
     };
 };
 //# sourceMappingURL=dark.js.map

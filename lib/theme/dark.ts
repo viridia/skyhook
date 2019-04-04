@@ -90,5 +90,11 @@ export const makeDark = (color: string, accent: string): Theme => {
       checkedSlideColor: '#000',
       checkedThumbColor: lighten(0.1, accent),
     },
+
+    tooltip: {
+      bgColor: darker,
+      textColor: c9,
+      borderColor: '#000',
+    },
   }
 };

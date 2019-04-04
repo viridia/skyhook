@@ -52,10 +52,17 @@ export interface MenuTheme {
 }
 
 /** Theme properties for text fields. */
-export interface TextField {
+export interface TextFieldTheme {
   bgColor: string;
   textColor: string;
   borderColor: string;
+}
+
+/** Theme properties for tooltips. */
+export interface TooltipTheme {
+  bgColor: string;
+  borderColor: string;
+  textColor: string;
 }
 
 /** Combined theme. */
@@ -70,7 +77,8 @@ export interface Theme {
   dialog: DialogTheme;
   menu: MenuTheme;
   progress: ProgressTheme;
-  textField: TextField;
+  textField: TextFieldTheme;
   toggle: ToggleSwitchColors;
   insetToggle: ToggleSwitchColors;
+  tooltip: TooltipTheme;
 }

@@ -9,6 +9,7 @@
 * Cards?
 * Pagination
 
-<Tooltip content={}>
-  <children />
-</Tooltip>
+## Other
+
+* Finish up component docs.
+* Include screenshots in component docs.

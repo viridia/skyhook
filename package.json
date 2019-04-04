@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc --project ./tsconfig.dist.json",
+    "build": "npm run build-dist && npm run build-storybook",
+    "build-dist": "tsc --project ./tsconfig.dist.json",
     "build-storybook": "build-storybook -c .storybook -o docs/storybook",
     "clean": "rm -r dist",
     "gen-icons": "cd lib/icons && npx @svgr/cli --ext tsx --out-dir=../icons-compiled *.svg",

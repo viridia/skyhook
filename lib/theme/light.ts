@@ -1,5 +1,5 @@
 import { Theme } from './Theme';
-import { darken, mix, transparentize, desaturate } from 'polished';
+import { darken, mix, transparentize, desaturate, lighten } from 'polished';
 
 export const makeLight = (color: string, accent: string): Theme => {
   // const muted = makeSpread(desaturate(0.2, color));
@@ -93,6 +93,12 @@ export const makeLight = (color: string, accent: string): Theme => {
       thumbColor: c9,
       checkedSlideColor: c2,
       checkedThumbColor: mix(0.3, accent, '#fff'),
+    },
+
+    tooltip: {
+      bgColor: lighten(0.02, c8),
+      textColor: textColor,
+      borderColor: darken(0.15, c8),
     },
   }
 };
