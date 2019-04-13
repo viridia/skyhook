@@ -1,13 +1,14 @@
 # TODO Items
 
-* Tooltip
 * SplitButton
+* Slider
+* GradientSlider
+* Pagination
+* Demo showing many controls.
 * Tables
 * Column Sort
-* Demo showing many controls.
 * Autocomplete
 * Cards?
-* Pagination
 
 ## Other
 

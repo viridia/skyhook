@@ -31,12 +31,15 @@ export const Menu = styled(MenuImpl)`
 `;
 
 export interface MenuItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  checked?: boolean;
   active?: boolean;
   eventKey?: string;
   onClick?: (e: any) => void;
 }
 
-export function MenuItemImpl({ onClick, active, eventKey, className, ...props }: MenuItemProps) {
+export function MenuItemImpl(
+  { onClick, checked, active, eventKey, className, ...props }: MenuItemProps) {
+
   function onKeyDown(e: React.KeyboardEvent<HTMLButtonElement>) {
     if (e.key === 'Enter' || e.key === ' ') {
       if (onClick) {
@@ -51,7 +54,7 @@ export function MenuItemImpl({ onClick, active, eventKey, className, ...props }:
       {...props}
       role="menuitem"
       data-event-key={eventKey}
-      className={classNames(className, { active })}
+      className={classNames(className, { checked, active })}
       onClick={onClick}
       onKeyDown={onKeyDown}
     />
@@ -84,7 +87,7 @@ export const MenuItem = styled(MenuItemImpl).attrs({
     color: ${p => p.theme.menu.hoverTextColor};
   }
 
-  &:focus {
+  &:focus, &.active {
     background-color: ${p => p.theme.menu.focusBgColor};
     color: ${p => p.theme.menu.focusTextColor};
   }
@@ -92,7 +95,7 @@ export const MenuItem = styled(MenuItemImpl).attrs({
   .checkable > & {
     margin-left: 1.5rem;
 
-    &.active {
+    &.checked {
       &::before {
         content: '\u2713';
         position: absolute;

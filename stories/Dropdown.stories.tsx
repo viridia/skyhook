@@ -41,19 +41,19 @@ storiesOf('Components/Menu', module).add(
           <header>Active Menu</header>
           <FixedMenu>
             <MenuItem>First</MenuItem>
-            <MenuItem active={true}>Middle</MenuItem>
+            <MenuItem checked={true}>Middle</MenuItem>
             <MenuItem>Last</MenuItem>
           </FixedMenu>
           <header>Checkable Menu</header>
           <FixedMenu checkable>
             <MenuItem>First</MenuItem>
-            <MenuItem active={true}>Middle</MenuItem>
+            <MenuItem checked={true}>Middle</MenuItem>
             <MenuItem>Last</MenuItem>
           </FixedMenu>
           <header>Divider</header>
           <FixedMenu>
             <MenuItem>First</MenuItem>
-            <MenuItem active={true}>Middle</MenuItem>
+            <MenuItem checked={true}>Middle</MenuItem>
             <MenuDivider />
             <MenuItem>Last</MenuItem>
           </FixedMenu>
