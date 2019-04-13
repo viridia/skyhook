@@ -13,6 +13,7 @@ const DropdownContainer = styled.div`
 export interface DropdownButtonProps {
   alignEnd?: boolean;
   disabled?: boolean;
+  checkable?: boolean;
   drop?: 'up' | 'left' | 'right' | 'down';
   variant?: ButtonVariant;
   size?: SizeVariant;
@@ -33,6 +34,7 @@ const DropdownButtonEl = styled(Button)`
 export function DropdownButton({
   drop = 'down',
   disabled,
+  checkable,
   size,
   alignEnd = false,
   className,
@@ -89,7 +91,7 @@ export function DropdownButton({
           </OverlayDropdown.Toggle>
           <OverlayDropdown.Menu flip={true}>
             {({ show, props: menuProps }) => show && (
-              <Menu {...menuProps} onClick={onMenuClick}>
+              <Menu {...menuProps} checkable={checkable} onClick={onMenuClick}>
                 {children}
               </Menu>
             )}

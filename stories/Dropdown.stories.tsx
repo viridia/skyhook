@@ -33,6 +33,27 @@ storiesOf('Components/Menu', module).add(
     </ThemeCard>
   ),
 ).add(
+  'DropdownButton (checkable)',
+  () => (
+    <ThemeCard>
+      {() => (
+        <DemoLayout>
+          <DropdownButton title="Click me" checkable={true}>
+            <MenuItem
+              checked={true}
+              onClick={() => { console.info('Choose First'); }}
+            >
+              First
+            </MenuItem>
+            <MenuItem onClick={() => { console.info('Choose Middle'); }}>Middle</MenuItem>
+            <MenuDivider />
+            <MenuItem onClick={() => { console.info('Choose Last'); }}>Last</MenuItem>
+          </DropdownButton>
+        </DemoLayout>
+      )}
+    </ThemeCard>
+  ),
+).add(
   'Menus',
   () => (
     <ThemeCard>
