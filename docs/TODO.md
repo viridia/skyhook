@@ -1,5 +1,6 @@
 # TODO Items
 
+* Progress bar error
 * SplitButton
 * Slider
 * GradientSlider

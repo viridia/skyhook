@@ -23,4 +23,5 @@ export { ToggleSwitch, ToggleSwitchProps, InsetToggleSwitch } from './ToggleSwit
 export { Tooltip, TooltipProps } from './Tooltip';
 export { ValidationMsg, ValidationState } from './ValidationMsg';
 export { SizeVariant } from './variant';
+export { makeLight, makeDark } from './theme';
 export { styled, css, createGlobalStyle, keyframes, ThemeProvider, Theme } from './style';
