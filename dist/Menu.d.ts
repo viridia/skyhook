@@ -3,7 +3,7 @@ export interface MenuProps extends React.InputHTMLAttributes<HTMLDivElement> {
     checkable?: boolean;
 }
 /** Drop-down menu class. */
-export declare const Menu: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<MenuProps & React.RefAttributes<{}>>, import("./style").Theme, {}, never>;
+export declare const Menu: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<MenuProps & React.RefAttributes<unknown>>, import("./style").Theme, {}, never>;
 export interface MenuItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     checked?: boolean;
     active?: boolean;

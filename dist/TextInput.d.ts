@@ -6,4 +6,4 @@ export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputEleme
     validationStatus?: ValidationState;
 }
 /** Text input form control. */
-export declare const TextInput: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<TextInputProps & React.RefAttributes<{}>>, import("./style").Theme, {}, never>;
+export declare const TextInput: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<TextInputProps & React.RefAttributes<unknown>>, import("./style").Theme, {}, never>;

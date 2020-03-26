@@ -3,4 +3,4 @@ export interface RadioButtonProps extends React.InputHTMLAttributes<HTMLInputEle
     value?: string;
     selected?: boolean;
 }
-export declare const RadioButton: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<RadioButtonProps & React.RefAttributes<{}>>, import("./style").Theme, {}, never>;
+export declare const RadioButton: import("styled-components").StyledComponent<React.ForwardRefExoticComponent<RadioButtonProps & React.RefAttributes<unknown>>, import("./style").Theme, {}, never>;
